@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>E-Paper — BHARAT FRONTIERS</title><link rel="stylesheet" href="../style.css"><style>@media print{.no-print{display:none!important}.paper{box-shadow:none!important;border:0!important}.paper-page{break-after:page}}.paper-wrap{max-width:1100px;margin:auto;padding:25px}.paper{background:#fff;border:1px solid #ccc;box-shadow:0 8px 30px #0001}.paper-page{padding:38px 44px;min-height:900px;border-bottom:1px solid #ddd}.paper-masthead{text-align:center;border-bottom:4px double #111;padding-bottom:16px}.paper-masthead h1{font-family:Georgia,serif;font-size:3rem;margin:0}.paper-masthead p{margin:5px}.toc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.paper-story{border-top:2px solid #111;padding-top:12px;margin-top:20px}.paper-story h2{font-family:Georgia,serif;font-size:2rem}.paper-story p{line-height:1.65}.source-note{font-size:.85rem}.toolbar{padding:15px 0;display:flex;gap:10px}.toolbar button,.toolbar a{padding:10px 14px;border:1px solid #222;background:#fff;text-decoration:none;color:#111;cursor:pointer}@media(max-width:700px){.paper-page{padding:25px 20px;min-height:auto}.toc-grid{grid-template-columns:1fr}.paper-masthead h1{font-size:2rem}}</style></head><body><div class="paper-wrap"><div class="toolbar no-print"><a href="./">← Digital Edition</a><button onclick="window.print()">Print / Save as PDF</button><a href="../index.html">Home</a></div><div class="paper" id="paper">Loading e-paper…</div></div><script>
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const safe=u=>{try{return new URL(u,location.href).href}catch{return '#'}};
+const q=new URLSearchParams(location.search);
+const id=q.get('edition')||'2026-09';
+async function load(){
+ let issue,arts=[];
+ try{
+   const r=await fetch('../api/issues?id='+encodeURIComponent(id));
+   if(!r.ok) throw Error();
+   const d=await r.json(); issue=d.issue; arts=d.articles||[];
+ }catch(e){
+   const [es,ds]=await Promise.all([fetch('./editions.json').then(r=>r.json()),fetch('../Data/articles.json').then(r=>r.json())]);
+   issue=es.find(x=>x.id===id)||es[0];
+   arts=(issue?.articleSlugs||[]).map(s=>ds.find(a=>a.slug===s)).filter(Boolean);
+ }
+ if(!issue){document.getElementById('paper').innerHTML='<div class="paper-page"><h1>Issue not found</h1></div>';return}
+ document.title=(issue.title||'E-Paper')+' — BHARAT FRONTIERS';
+ const stories=arts.filter(Boolean);
+ document.getElementById('paper').innerHTML=`
+ <section class="paper-page">
+  <div class="paper-masthead"><h1>BHARAT FRONTIERS</h1><p><strong>THE KNOWLEDGE POST</strong></p><p>SCIENCE • TECHNOLOGY • POLICY • BUSINESS</p><h2>${esc(issue.month_label||issue.title||id)}</h2></div>
+  <div style="text-align:center;margin:35px 0"><img src="${safe(issue.cover_image||issue.cover||'./Digital-Edition.png')}" alt="BHARAT FRONTIERS monthly e-paper cover" style="max-width:100%;max-height:520px"></div>
+  <h2>Monthly Contents</h2>
+  <div class="toc-grid">${stories.map((a,i)=>`<div><strong>${String(i+1).padStart(2,'0')}</strong> — <a href="../Articles/article.html?slug=${encodeURIComponent(a.slug)}">${esc(a.title)}</a><p>${esc(a.summary||'')}</p></div>`).join('')}</div>
+ </section>
+ <section class="paper-page">
+  <div class="paper-masthead"><h1>Monthly Knowledge Report</h1><p>${esc(issue.month_label||id)}</p></div>
+  ${issue.content_html?`<div>${issue.content_html}</div>`:stories.map(a=>`<article class="paper-story"><h2>${esc(a.title)}</h2><p><strong>${esc(a.section||'')}</strong> · ${esc(a.type||'')}</p><p>${esc(a.summary||'')}</p><p><a href="../Articles/article.html?slug=${encodeURIComponent(a.slug)}">Read the full article online →</a></p></article>`).join('')}
+ </section>
+ <section class="paper-page">
+  <div class="paper-masthead"><h1>What Happened This Month — Till Date</h1><p>Evidence-led monthly developments across the permanent BHARAT FRONTIERS topics.</p></div>
+  <div>${stories.map(a=>`<article class="paper-story"><h2>${esc(a.title)}</h2><p>${esc(a.summary||'')}</p><p><a href="../Articles/article.html?slug=${encodeURIComponent(a.slug)}">Open article and references →</a></p></article>`).join('')}</div>
+ </section>
+ <section class="paper-page">
+  <div class="paper-masthead"><h1>Sources &amp; Verification</h1><p>Only source-verified stories are eligible for publication.</p></div>
+  <ol>${stories.map(a=>`<li><a href="../Articles/article.html?slug=${encodeURIComponent(a.slug)}">${esc(a.title)}</a> — references are listed on the article page.</li>`).join('')}</ol>
+  <p style="margin-top:50px">Use “Print / Save as PDF” above to create the monthly e-paper PDF.</p>
+ </section>`;
+}
+load();
+</script></body></html>

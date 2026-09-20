@@ -1,47 +1,62 @@
 [
   {
-    "id": "science",
-    "name": "Science",
-    "description": "Scientific discoveries, research and emerging fields."
+    "slug": "research",
+    "name": "Research"
   },
   {
-    "id": "technology",
-    "name": "Technology",
-    "description": "Artificial intelligence, semiconductors, computing and emerging technologies."
+    "slug": "technology",
+    "name": "Technology"
   },
   {
-    "id": "policy",
-    "name": "Policy",
-    "description": "Technology policy, digital governance and regulation."
+    "slug": "education",
+    "name": "Education"
   },
   {
-    "id": "business",
-    "name": "Business",
-    "description": "Startups, industry, markets and the technology economy."
+    "slug": "society",
+    "name": "Society"
   },
   {
-    "id": "research",
-    "name": "Research & Innovation",
-    "description": "Research, patents, innovation and technology commercialisation."
+    "slug": "culture",
+    "name": "Culture"
   },
   {
-    "id": "india-frontiers",
-    "name": "India Frontiers",
-    "description": "Science, technology and innovation developments across India."
+    "slug": "technology-innovation",
+    "name": "Technology & Innovation"
   },
   {
-    "id": "explainer",
-    "name": "Explainers",
-    "description": "Clear explanations of complex science and technology topics."
+    "slug": "environment",
+    "name": "Environment"
   },
   {
-    "id": "analysis",
-    "name": "Analysis",
-    "description": "Evidence-based examination of important developments and trends."
+    "slug": "economy",
+    "name": "Economy"
   },
   {
-    "id": "opinion",
-    "name": "Opinion",
-    "description": "Clearly identified viewpoints and arguments from authors."
+    "slug": "science",
+    "name": "Science"
+  },
+  {
+    "slug": "health",
+    "name": "Health"
+  },
+  {
+    "slug": "india",
+    "name": "India"
+  },
+  {
+    "slug": "world",
+    "name": "World"
+  },
+  {
+    "slug": "policy",
+    "name": "Policy"
+  },
+  {
+    "slug": "business",
+    "name": "Business"
+  },
+  {
+    "slug": "explainer",
+    "name": "Explainers"
   }
 ]

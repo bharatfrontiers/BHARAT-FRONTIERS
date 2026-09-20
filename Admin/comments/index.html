@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comments & Queries — BHARAT FRONTIERS</title>
+<link rel="stylesheet" href="../../style.css">
+<style>
+.admin{max-width:1100px;margin:auto;padding:42px 20px}.card{padding:20px;border:1px solid #ddd;border-radius:14px;margin:14px 0}.btn{padding:9px 13px;border:0;border-radius:8px;background:#111;color:#fff;cursor:pointer;margin:4px}.btn.reject{background:#777}.meta{font-size:.8rem;color:#666}.body{white-space:pre-wrap;line-height:1.65;margin:12px 0}.pending{border-left:4px solid #111}.approved{border-left:4px solid #4b8}.rejected{border-left:4px solid #aaa}.ok{padding:10px;background:#eef8ee;border-radius:8px}.err{padding:10px;background:#fff0f0;border-radius:8px}
+</style>
+</head>
+<body>
+<main class="admin">
+<h1>Comments &amp; Queries</h1>
+<p>Review reader submissions before they appear publicly. E-mail addresses are visible only in the editorial area and are never shown on public article pages.</p>
+<div id="list">Loading…</div>
+<p><a href="../">← Admin</a></p>
+</main>
+<script>
+const K=()=>sessionStorage.getItem('bf_admin_key')||'';
+const H=()=>({'content-type':'application/json','x-admin-key':K()});
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+async function load(){
+ if(!K()){document.getElementById('list').innerHTML='<div class="err">Open Admin home and save ADMIN_KEY first.</div>';return}
+ try{
+  const r=await fetch('../../api/comments?admin=1&slug=all',{headers:H()});
+  const d=await r.json(); if(!r.ok) throw new Error(d.error||'Unable to load comments');
+  const rows=d.comments||[];
+  document.getElementById('list').innerHTML=rows.length?rows.map(c=>`<article class="card ${esc(c.status)}"><div class="meta"><strong>${esc(c.kind==='query'?'QUERY':'COMMENT')}</strong> · ${esc(c.status)} · ${esc(new Date(c.created_at).toLocaleString())}</div><h3>${esc(c.title)}</h3><p><strong>${esc(c.name)}</strong> · <a href="mailto:${esc(c.email)}">${esc(c.email)}</a></p><div class="body">${esc(c.body)}</div>${c.status==='pending'?`<button class="btn" onclick="moderate('${esc(c.id)}','approved')">Approve</button><button class="btn reject" onclick="moderate('${esc(c.id)}','rejected')">Reject</button>`:`<button class="btn" onclick="moderate('${esc(c.id)}','pending')">Move to Pending</button>`}</article>`).join(''):'<p>No reader submissions yet.</p>';
+ }catch(e){document.getElementById('list').innerHTML=`<div class="err">${esc(e.message)}</div>`}
+}
+async function moderate(id,action){
+ const r=await fetch('../../api/comments',{method:'POST',headers:H(),body:JSON.stringify({id,action})});
+ const d=await r.json();
+ if(!r.ok){alert(d.error||'Unable to update comment');return}
+ load();
+}
+load();
+</script>
+</body>
+</html>

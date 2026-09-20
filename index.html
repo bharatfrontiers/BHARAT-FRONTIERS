@@ -1,907 +1,813 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Bharat Frontiers - The Knowledge Post. Science, Technology, Policy and Business.">
-
-    <meta name="keywords"
-          content="India news, science, technology, policy, business, research, innovation">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>BHARAT FRONTIERS | The Knowledge Post</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+          content="BHARAT FRONTIERS — The Knowledge Post. Independent coverage of science, technology, research, policy, business, society and ideas shaping India and the world.">
 
-    <!-- BHARAT FRONTIERS FAVICON -->
+    <meta name="keywords"
+          content="Bharat Frontiers, knowledge publication, e-paper, science, technology, research, innovation, policy, India">
+
+    <meta name="author" content="BHARAT FRONTIERS">
+
+    <meta property="og:title" content="BHARAT FRONTIERS — The Knowledge Post">
+    <meta property="og:description"
+          content="Science • Technology • Research • Policy • Business • Ideas">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./Images/social-preview.jpg">
+
     <link rel="icon"
           type="image/png"
-          href="./Assets/Logos/bharat-frontiers-icon-1.png">
+          href="./Assets/Logos/bharat-frontiers-icon.png">
 
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     TOP BAR
-===================================================== -->
-
-<div class="top-bar">
-
-    <div class="container top-bar-content">
-
-        <div>
-            News | Research | Analysis | Innovation
+<!-- =========================================================
+     TOP UTILITY BAR
+========================================================= -->
+<div class="utility-bar">
+    <div class="site-shell utility-inner">
+        <div class="utility-left">
+            <span class="utility-date" id="publicationDate">THE KNOWLEDGE POST</span>
+            <span class="utility-separator">•</span>
+            <a href="./Articles/index.html">Latest</a>
+            <a href="./Articles/category.html?category=Research">Research</a>
+            <a href="./Articles/category.html?category=Analysis">Analysis</a>
+            <a href="./Articles/category.html?category=Technology">Innovation</a>
         </div>
 
-        <div class="top-links">
-
-            <a href="./Pages/newsletter.html">
-                Newsletter
-            </a>
-
-            <a href="./Pages/contact.html">
-                Contact
-            </a>
-
+        <div class="utility-right">
+            <a href="./Digital-Edition/index.html">Digital Edition</a>
+            <a href="./Digital-Edition/index.html">Newsletter</a>
+            <a href="./Articles/index.html">About</a>
+            <a href="./Pages/contact.html">Contact</a>
         </div>
-
     </div>
-
 </div>
 
 
+<!-- =========================================================
+     MASTHEAD
+========================================================= -->
+<header class="masthead">
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
-<header class="header">
-
-    <div class="container header-main">
+    <div class="site-shell masthead-inner">
 
         <button class="menu-button"
                 id="menuButton"
+                type="button"
                 aria-label="Open navigation">
-            ☰
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
-
-        <!-- =============================================
-             BHARAT FRONTIERS BRAND
-        ============================================== -->
-
-        <div class="brand">
-
-            <a href="./index.html"
-               class="brand-link"
-               aria-label="BHARAT FRONTIERS Home">
-
+        <div class="masthead-brand">
+            <a href="./index.html" class="masthead-logo-link" aria-label="BHARAT FRONTIERS home">
                 <img
-                    src="./Assets/Logos/bharat-frontiers-icon-1.png"
-                    alt="Bharat Frontiers"
-                    class="brand-icon"
-                >
-
-
-                <div class="brand-text">
-
-                    <h1>
-                        BHARAT FRONTIERS
-                    </h1>
-
-                    <div class="tagline">
-                        The Knowledge Post
-                    </div>
-
-                    <div class="brand-description">
-                        Science • Technology • Policy • Business
-                    </div>
-
-                </div>
-
+                    src="./Assets/Logos/bharat-frontiers-official-logo.png"
+                    alt="BHARAT FRONTIERS official logo"
+                    class="masthead-logo">
             </a>
 
+            <div class="masthead-copy">
+                <a href="./index.html" class="masthead-title-link" aria-label="BHARAT FRONTIERS home">
+                    <h1>BHARAT FRONTIERS</h1>
+                </a>
+                <p class="masthead-tagline">The Knowledge Post</p>
+                <p class="masthead-subline">
+                    SCIENCE <span>•</span> TECHNOLOGY <span>•</span> POLICY <span>•</span> BUSINESS
+                </p>
+            </div>
         </div>
-
 
         <button class="search-button"
                 id="searchButton"
+                type="button"
                 aria-label="Open search">
-            🔍
+            <span class="search-icon"></span>
+            <span class="search-label">Search</span>
         </button>
 
     </div>
-
-
-
-    <!-- =================================================
-         NAVIGATION
-    ================================================== -->
-
-    <nav class="navigation"
-         id="navigation">
-
-        <div class="container nav-container">
-
-            <a href="./index.html"
-               class="active">
-                Home
-            </a>
-
-            <a href="#science">
-                Science
-            </a>
-
-            <a href="#technology">
-                Technology
-            </a>
-
-            <a href="#policy">
-                Policy
-            </a>
-
-            <a href="#business">
-                Business
-            </a>
-
-            <a href="#research">
-                Research
-            </a>
-
-            <a href="#analysis">
-                Analysis
-            </a>
-
-            <a href="#innovation">
-                Innovation
-            </a>
-
-            <a href="./Digital-Edition/index.html">
-                Digital Edition
-            </a>
-
-            <a href="./Pages/about.html">
-                About
-            </a>
-
-        </div>
-
-    </nav>
 
 </header>
 
 
+<!-- =========================================================
+     PRIMARY NAVIGATION
+========================================================= -->
+<nav class="navigation" id="navigation" aria-label="Primary navigation">
 
-<!-- =====================================================
-     SEARCH BOX
-===================================================== -->
+    <div class="site-shell navigation-inner">
 
-<div class="search-panel"
-     id="searchPanel">
+        <a href="./index.html" class="active">Home</a>
 
-    <div class="container">
+        <a href="./Articles/category.html?category=Science">Science</a>
 
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search Bharat Frontiers..."
-        >
+        <a href="./Articles/category.html?category=Technology">Technology</a>
 
-        <button id="closeSearch"
-                aria-label="Close search">
-            ✕
-        </button>
+        <a href="./Articles/category.html?category=Policy">Policy</a>
+
+        <a href="./Articles/category.html?category=Business">Business</a>
+
+        <a href="./Articles/category.html?category=Research">Research</a>
+
+        <a href="./Articles/category.html?category=Analysis">Analysis</a>
+
+        <a href="./Articles/category.html?category=Innovation">Innovation</a>
+
+        <a href="./Articles/category.html?category=Culture">Culture</a>
+
+        <a href="./Digital-Edition/index.html">Digital Edition</a>
 
     </div>
 
-</div>
+</nav>
 
 
+<!-- =========================================================
+     SEARCH PANEL
+========================================================= -->
+<section class="search-panel" id="searchPanel" aria-label="Site search">
 
-<!-- =====================================================
-     BREAKING NEWS
-===================================================== -->
+    <div class="site-shell search-panel-inner">
 
-<div class="breaking-bar">
+        <label for="searchInput">Search BHARAT FRONTIERS</label>
 
-    <div class="container breaking-content">
+        <div class="search-form-row">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search articles, research, technology, policy..."
+                autocomplete="off">
 
-        <span class="breaking-label">
-            LATEST
-        </span>
+            <button type="button"
+                    id="closeSearch">
+                Close
+            </button>
+        </div>
 
-        <div class="breaking-text">
-            Bharat Frontiers — The Knowledge Post
+        <p class="search-note">
+            Search is connected to the publication system in the next integration stage.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LATEST / SECTION STRIP
+========================================================= -->
+<div class="section-strip">
+
+    <div class="site-shell section-strip-inner">
+
+        <span class="section-strip-label">LATEST</span>
+
+        <div class="section-strip-track">
+            <a href="./Articles/article.html?slug=indias-emerging-technology-frontiers">
+                Knowledge, research and technology shaping India's future
+            </a>
+            <span>•</span>
+            <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                Why research matters beyond the laboratory
+            </a>
         </div>
 
     </div>
 
 </div>
 
-
-
-<!-- =====================================================
-     MAIN CONTENT
-===================================================== -->
 
 <main>
 
+<!-- =========================================================
+     HERO / LEAD FRONT
+========================================================= -->
+<section class="front-page-section lead-section">
 
+    <div class="site-shell">
 
-<!-- =====================================================
-     HERO SECTION
-===================================================== -->
-
-<section class="hero-section">
-
-    <div class="container hero-grid">
-
-
-        <!-- FEATURED STORY -->
-
-        <article class="featured-story">
-
-            <div class="story-image hero-image">
-                <span>FEATURED</span>
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">BHARAT FRONTIERS</span>
+                <h2>Today's Knowledge Front</h2>
             </div>
 
-            <div class="story-content">
+            <a href="./Articles/index.html" class="section-link">
+                View all stories →
+            </a>
+        </div>
 
-                <div class="category">
-                    SCIENCE & TECHNOLOGY
-                </div>
+        <div class="lead-grid">
 
-                <h2>
-                    The Future of Science, Technology and Innovation in India
-                </h2>
+            <!-- Lead story -->
+            <article class="lead-story">
 
-                <p>
-                    Bharat Frontiers explores the ideas, discoveries,
-                    technologies and policies shaping India's future.
+                <a href="./Articles/article.html?slug=indias-emerging-technology-frontiers"
+                   class="lead-image-link">
+
+                    <div class="lead-image">
+                        <img
+                            src="./Images/Articles/research-innovation.png"
+                            alt="Research and innovation shaping India's future"
+                            width="1536"
+                            height="1024">
+                        <span class="image-label">FEATURED</span>
+                    </div>
+
+                </a>
+
+                <div class="story-kicker">RESEARCH &amp; INNOVATION</div>
+
+                <h3>
+                    <a href="./Articles/article.html?slug=indias-emerging-technology-frontiers">
+                        Research, technology and the ideas shaping India's next frontier
+                    </a>
+                </h3>
+
+                <p class="story-standfirst">
+                    From laboratories and universities to industry and society,
+                    knowledge is becoming a central force in India's next phase of development.
                 </p>
 
                 <div class="story-meta">
-                    Bharat Frontiers Editorial Team · 18 September 2026
+                    BHARAT FRONTIERS <span>•</span> TODAY
                 </div>
 
-                <a href="./Articles/article.html?id=bf001"
-                   class="read-more">
-                    Read Full Story →
+            </article>
+
+
+            <!-- Supporting stories -->
+            <aside class="top-stories" aria-labelledby="topStoriesTitle">
+
+                <div class="rail-heading">
+                    <h2 id="topStoriesTitle">Top Stories</h2>
+                    <span></span>
+                </div>
+
+                <article class="rail-story">
+                    <span class="rail-number">01</span>
+                    <div>
+                        <div class="story-kicker">SCIENCE</div>
+                        <h3>
+                            <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                                Why research matters beyond the laboratory
+                            </a>
+                        </h3>
+                        <p>Research becomes meaningful when knowledge reaches society.</p>
+                    </div>
+                </article>
+
+                <article class="rail-story">
+                    <span class="rail-number">02</span>
+                    <div>
+                        <div class="story-kicker">TECHNOLOGY</div>
+                        <h3>
+                            <a href="./Articles/article.html?slug=artificial-intelligence-from-tool-to-infrastructure">
+                                Artificial intelligence and India's technology landscape
+                            </a>
+                        </h3>
+                        <p>Technology is changing how knowledge is created and applied.</p>
+                    </div>
+                </article>
+
+                <article class="rail-story">
+                    <span class="rail-number">03</span>
+                    <div>
+                        <div class="story-kicker">SOCIETY</div>
+                        <h3>
+                            <a href="./Articles/article.html?slug=governing-emerging-technologies">
+                                Technology and society: understanding the connection
+                            </a>
+                        </h3>
+                        <p>The social consequences of technological change deserve equal attention.</p>
+                    </div>
+                </article>
+
+                <article class="rail-story">
+                    <span class="rail-number">04</span>
+                    <div>
+                        <div class="story-kicker">CULTURE</div>
+                        <h3>
+                            <a href="./Articles/article.html?slug=from-laboratory-to-society">
+                                Culture in a digitally connected India
+                            </a>
+                        </h3>
+                        <p>Digital life is reshaping how culture is experienced and shared.</p>
+                    </div>
+                </article>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LATEST KNOWLEDGE
+========================================================= -->
+<section class="front-page-section latest-section">
+
+    <div class="site-shell">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">LATEST</span>
+                <h2>Latest Knowledge</h2>
+            </div>
+
+            <a href="./Articles/index.html" class="section-link">
+                All articles →
+            </a>
+        </div>
+
+        <div class="story-grid story-grid-three">
+
+            <article class="story-card">
+                <a href="./Articles/article.html?slug=research-in-the-next-decade"
+                   class="card-image-link">
+                    <div class="card-image">
+                        <img src="./Images/Articles/scientific-research.png"
+                             alt="Scientific research"
+                             loading="lazy">
+                    </div>
                 </a>
+
+                <div class="story-kicker">RESEARCH</div>
+
+                <h3>
+                    <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                        Why research matters beyond the laboratory
+                    </a>
+                </h3>
+
+                <p>
+                    Research creates the evidence, ideas and capabilities
+                    that allow societies to solve difficult problems.
+                </p>
+
+                <div class="story-meta">RESEARCH <span>•</span> TODAY</div>
+            </article>
+
+
+            <article class="story-card">
+                <a href="./Articles/article.html?slug=artificial-intelligence-from-tool-to-infrastructure"
+                   class="card-image-link">
+                    <div class="card-image">
+                        <img src="./Images/Articles/ai-infrastructure.png"
+                             alt="Artificial intelligence and technology infrastructure"
+                             loading="lazy">
+                    </div>
+                </a>
+
+                <div class="story-kicker">TECHNOLOGY</div>
+
+                <h3>
+                    <a href="./Articles/article.html?slug=artificial-intelligence-from-tool-to-infrastructure">
+                        Artificial intelligence and India's technology landscape
+                    </a>
+                </h3>
+
+                <p>
+                    The next technology cycle will connect computing,
+                    infrastructure, education and industry.
+                </p>
+
+                <div class="story-meta">TECHNOLOGY <span>•</span> TODAY</div>
+            </article>
+
+
+            <article class="story-card">
+                <a href="./Articles/article.html?slug=governing-emerging-technologies"
+                   class="card-image-link">
+                    <div class="card-image">
+                        <img src="./Images/Articles/deep-tech-business.png"
+                             alt="Deep technology and business"
+                             loading="lazy">
+                    </div>
+                </a>
+
+                <div class="story-kicker">BUSINESS &amp; INNOVATION</div>
+
+                <h3>
+                    <a href="./Articles/article.html?slug=governing-emerging-technologies">
+                        Deep technology, business and the new knowledge economy
+                    </a>
+                </h3>
+
+                <p>
+                    Innovation becomes transformative when research,
+                    entrepreneurship and society move together.
+                </p>
+
+                <div class="story-meta">INNOVATION <span>•</span> TODAY</div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH + MOST READ
+========================================================= -->
+<section class="front-page-section research-section" id="research">
+
+    <div class="site-shell">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">DEEPER READING</span>
+                <h2>Research &amp; Discovery</h2>
+            </div>
+
+            <a href="./Articles/category.html?category=Research"
+               class="section-link">
+                More research →
+            </a>
+        </div>
+
+        <div class="research-grid">
+
+            <article class="research-feature">
+
+                <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                    <div class="research-feature-image">
+                        <img src="./Images/Articles/laboratory-to-society.png"
+                             alt="Research moving from laboratory to society"
+                             loading="lazy">
+                    </div>
+                </a>
+
+                <div class="story-kicker">RESEARCH</div>
+
+                <h3>
+                    <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                        From laboratory to society: why knowledge needs a public life
+                    </a>
+                </h3>
+
+                <p>
+                    The value of research is measured not only by discovery,
+                    but by how knowledge travels into education, industry,
+                    public policy and everyday life.
+                </p>
+
+                <a href="./Articles/article.html?slug=research-in-the-next-decade"
+                   class="read-link">
+                    Read the analysis →
+                </a>
+
+            </article>
+
+
+            <aside class="most-read">
+
+                <div class="rail-heading">
+                    <h2>Most Read</h2>
+                    <span></span>
+                </div>
+
+                <a href="./Articles/article.html?slug=indias-emerging-technology-frontiers"
+                   class="most-read-item">
+                    <span>01</span>
+                    <strong>Knowledge, technology and the future of Bharat</strong>
+                </a>
+
+                <a href="./Articles/article.html?slug=research-in-the-next-decade"
+                   class="most-read-item">
+                    <span>02</span>
+                    <strong>Why research matters beyond the laboratory</strong>
+                </a>
+
+                <a href="./Articles/article.html?slug=artificial-intelligence-from-tool-to-infrastructure"
+                   class="most-read-item">
+                    <span>03</span>
+                    <strong>Rethinking education for the knowledge economy</strong>
+                </a>
+
+                <a href="./Articles/article.html?slug=governing-emerging-technologies"
+                   class="most-read-item">
+                    <span>04</span>
+                    <strong>Technology and society: understanding the connection</strong>
+                </a>
+
+                <a href="./Articles/article.html?slug=from-laboratory-to-society"
+                   class="most-read-item">
+                    <span>05</span>
+                    <strong>Culture in a digitally connected India</strong>
+                </a>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION: SCIENCE
+========================================================= -->
+<section class="front-page-section editorial-section" id="science">
+
+    <div class="site-shell">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker science-kicker">SCIENCE</span>
+                <h2>Science &amp; Discovery</h2>
+            </div>
+
+            <a href="./Articles/category.html?category=Science"
+               class="section-link">
+                Explore Science →
+            </a>
+        </div>
+
+        <div class="editorial-grid">
+
+            <article class="editorial-main">
+                <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                    <img src="./Images/Articles/scientific-research.png"
+                         alt="Scientific research and discovery"
+                         loading="lazy">
+                </a>
+                <div class="story-kicker">FEATURE</div>
+                <h3>
+                    <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                        The research questions that could shape the next decade
+                    </a>
+                </h3>
+            </article>
+
+            <article class="editorial-small">
+                <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                    <img src="./Images/Articles/research-next-decade.png"
+                         alt="Research next decade"
+                         loading="lazy">
+                </a>
+                <div class="story-kicker">DISCOVERY</div>
+                <h3>
+                    <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                        What comes next for scientific discovery?
+                    </a>
+                </h3>
+            </article>
+
+            <article class="editorial-small">
+                <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                    <img src="./Images/Articles/laboratory-to-society.png"
+                         alt="Laboratory to society"
+                         loading="lazy">
+                </a>
+                <div class="story-kicker">IDEAS</div>
+                <h3>
+                    <a href="./Articles/article.html?slug=research-in-the-next-decade">
+                        Turning research into public value
+                    </a>
+                </h3>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION: TECHNOLOGY
+========================================================= -->
+<section class="front-page-section editorial-section" id="technology">
+
+    <div class="site-shell">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker technology-kicker">TECHNOLOGY</span>
+                <h2>Technology &amp; Innovation</h2>
+            </div>
+
+            <a href="./Articles/category.html?category=Technology"
+               class="section-link">
+                Explore Technology →
+            </a>
+        </div>
+
+        <div class="technology-layout">
+
+            <article class="technology-lead">
+                <a href="./Articles/article.html?slug=artificial-intelligence-from-tool-to-infrastructure">
+                    <img src="./Images/Articles/ai-infrastructure.png"
+                         alt="Artificial intelligence infrastructure"
+                         loading="lazy">
+                </a>
+
+                <div class="story-kicker">TECHNOLOGY</div>
+
+                <h3>
+                    <a href="./Articles/article.html?slug=artificial-intelligence-from-tool-to-infrastructure">
+                        Artificial intelligence, infrastructure and India's technology future
+                    </a>
+                </h3>
+
+                <p>
+                    AI is becoming part of a much wider technology ecosystem
+                    spanning data, computing, education and enterprise.
+                </p>
+            </article>
+
+            <div class="technology-list">
+
+                <article class="list-story">
+                    <div class="list-story-image">
+                        <img src="./Images/Articles/technology-policy.png"
+                             alt="Technology policy"
+                             loading="lazy">
+                    </div>
+                    <div>
+                        <div class="story-kicker">POLICY</div>
+                        <h3>
+                            <a href="./Articles/article.html?slug=artificial-intelligence-from-tool-to-infrastructure">
+                                Technology policy and the choices ahead
+                            </a>
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="list-story">
+                    <div class="list-story-image">
+                        <img src="./Images/Articles/semiconductors.png"
+                             alt="Semiconductor technology"
+                             loading="lazy">
+                    </div>
+                    <div>
+                        <div class="story-kicker">DEEP TECH</div>
+                        <h3>
+                            <a href="./Articles/article.html?slug=artificial-intelligence-from-tool-to-infrastructure">
+                                Semiconductors and strategic technology
+                            </a>
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="list-story">
+                    <div class="list-story-image">
+                        <img src="./Images/Articles/technology-frontiers.png"
+                             alt="Technology frontiers"
+                             loading="lazy">
+                    </div>
+                    <div>
+                        <div class="story-kicker">FRONTIERS</div>
+                        <h3>
+                            <a href="./Articles/article.html?slug=indias-emerging-technology-frontiers">
+                                The technology frontiers to watch
+                            </a>
+                        </h3>
+                    </div>
+                </article>
 
             </div>
 
-        </article>
+        </div>
+
+    </div>
+
+</section>
 
 
+<!-- =========================================================
+     SECTION: POLICY / BUSINESS / CULTURE
+========================================================= -->
+<section class="front-page-section compact-sections">
 
-        <!-- TOP STORIES -->
+    <div class="site-shell compact-grid">
 
-        <aside class="top-stories">
-
-            <div class="section-title small-title">
-
-                <h2>
-                    TOP STORIES
-                </h2>
-
+        <section id="policy" class="compact-section">
+            <div class="compact-heading">
+                <span class="section-kicker policy-kicker">POLICY</span>
+                <a href="./Articles/category.html?category=Policy">More →</a>
             </div>
 
+            <h2>Policy &amp; Public Affairs</h2>
 
-            <article class="top-story">
-
-                <span class="category">
-                    SCIENCE
-                </span>
-
-                <h3>
-                    Research and discoveries shaping the next decade
-                </h3>
-
-                <small>
-                    Science · Today
-                </small>
-
-            </article>
-
-
-            <article class="top-story">
-
-                <span class="category">
-                    TECHNOLOGY
-                </span>
-
-                <h3>
-                    Artificial Intelligence and India's technology landscape
-                </h3>
-
-                <small>
-                    Technology · Today
-                </small>
-
-            </article>
-
-
-            <article class="top-story">
-
-                <span class="category">
-                    POLICY
-                </span>
-
-                <h3>
-                    Understanding emerging technology policies
-                </h3>
-
-                <small>
-                    Policy · Today
-                </small>
-
-            </article>
-
-
-            <article class="top-story">
-
-                <span class="category">
-                    BUSINESS
-                </span>
-
-                <h3>
-                    India's innovation and startup ecosystem
-                </h3>
-
-                <small>
-                    Business · Today
-                </small>
-
-            </article>
-
-        </aside>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     LATEST NEWS
-===================================================== -->
-
-<section class="content-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <h2>
-                LATEST NEWS
-            </h2>
-
-            <a href="./Articles/index.html">
-                View All →
-            </a>
-
-        </div>
-
-
-        <div class="news-grid">
-
-
-            <article class="news-card">
-
-                <div class="card-image">
-                    SCIENCE
-                </div>
-
-                <div class="card-body">
-
-                    <span class="category">
-                        SCIENCE
-                    </span>
-
+            <article class="compact-story">
+                <img src="./Images/Articles/technology-policy.png"
+                     alt="Technology policy"
+                     loading="lazy">
+                <div>
+                    <div class="story-kicker">POLICY</div>
                     <h3>
-                        Scientific research continues to reshape our understanding
+                        <a href="./Articles/article.html?slug=governing-emerging-technologies">
+                            Understanding emerging technology policies
+                        </a>
                     </h3>
-
-                    <p>
-                        Discoveries and developments from laboratories,
-                        universities and research institutions.
-                    </p>
-
-                    <div class="card-date">
-                        18 September 2026
-                    </div>
-
+                    <p>How policy shapes the relationship between technology and society.</p>
                 </div>
-
             </article>
+        </section>
 
 
+        <section id="business" class="compact-section">
+            <div class="compact-heading">
+                <span class="section-kicker business-kicker">BUSINESS</span>
+                <a href="./Articles/category.html?category=Business">More →</a>
+            </div>
 
-            <article class="news-card">
+            <h2>Business &amp; Knowledge Economy</h2>
 
-                <div class="card-image">
-                    AI & TECH
-                </div>
-
-                <div class="card-body">
-
-                    <span class="category">
-                        TECHNOLOGY
-                    </span>
-
+            <article class="compact-story">
+                <img src="./Images/Articles/deep-tech-business.png"
+                     alt="Deep tech business"
+                     loading="lazy">
+                <div>
+                    <div class="story-kicker">INNOVATION</div>
                     <h3>
-                        Artificial Intelligence enters a new phase of innovation
+                        <a href="./Articles/article.html?slug=governing-emerging-technologies">
+                            Deep technology and the next knowledge economy
+                        </a>
                     </h3>
-
-                    <p>
-                        Exploring developments in artificial intelligence
-                        and emerging technologies.
-                    </p>
-
-                    <div class="card-date">
-                        18 September 2026
-                    </div>
-
+                    <p>Research, entrepreneurship and technology are increasingly connected.</p>
                 </div>
-
             </article>
+        </section>
 
 
+        <section id="culture" class="compact-section">
+            <div class="compact-heading">
+                <span class="section-kicker culture-kicker">CULTURE</span>
+                <a href="./Articles/category.html?category=Culture">More →</a>
+            </div>
 
-            <article class="news-card">
+            <h2>Culture &amp; Society</h2>
 
-                <div class="card-image">
-                    BUSINESS
-                </div>
-
-                <div class="card-body">
-
-                    <span class="category">
-                        BUSINESS
-                    </span>
-
+            <article class="compact-story">
+                <img src="./Images/Articles/technology-ambition.png"
+                     alt="Technology and society"
+                     loading="lazy">
+                <div>
+                    <div class="story-kicker">SOCIETY</div>
                     <h3>
-                        India's startup and innovation ecosystem continues to grow
+                        <a href="./Articles/article.html?slug=from-laboratory-to-society">
+                            Culture in a digitally connected India
+                        </a>
                     </h3>
-
-                    <p>
-                        Industry, startups and entrepreneurship shaping
-                        India's economy.
-                    </p>
-
-                    <div class="card-date">
-                        18 September 2026
-                    </div>
-
+                    <p>Ideas, identity and culture in an increasingly connected society.</p>
                 </div>
-
             </article>
-
-        </div>
+        </section>
 
     </div>
 
 </section>
 
 
+<!-- =========================================================
+     EDITOR'S CHOICE
+========================================================= -->
+<section class="front-page-section editors-choice">
 
-<!-- =====================================================
-     SCIENCE
-===================================================== -->
+    <div class="site-shell editors-choice-inner">
 
-<section class="content-section category-section"
-         id="science">
-
-    <div class="container">
-
-        <div class="section-heading">
+        <div class="editors-choice-copy">
+            <span class="section-kicker">EDITOR'S CHOICE</span>
 
             <h2>
-                SCIENCE
-            </h2>
-
-            <a href="./Articles/index.html?category=science">
-                More Science →
-            </a>
-
-        </div>
-
-
-        <div class="three-column">
-
-
-            <article class="category-card">
-
-                <div class="small-image">
-                    SPACE
-                </div>
-
-                <span class="category">
-                    SPACE
-                </span>
-
-                <h3>
-                    India's space exploration and scientific ambitions
-                </h3>
-
-                <p>
-                    Developments in space science, exploration and research.
-                </p>
-
-            </article>
-
-
-
-            <article class="category-card">
-
-                <div class="small-image">
-                    HEALTH
-                </div>
-
-                <span class="category">
-                    HEALTH SCIENCE
-                </span>
-
-                <h3>
-                    Science and the future of healthcare
-                </h3>
-
-                <p>
-                    Research and innovation transforming healthcare.
-                </p>
-
-            </article>
-
-
-
-            <article class="category-card">
-
-                <div class="small-image">
-                    CLIMATE
-                </div>
-
-                <span class="category">
-                    CLIMATE
-                </span>
-
-                <h3>
-                    Understanding India's changing climate landscape
-                </h3>
-
-                <p>
-                    Scientific perspectives on climate and environment.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     TECHNOLOGY
-===================================================== -->
-
-<section class="content-section alternate-section"
-         id="technology">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <h2>
-                TECHNOLOGY
-            </h2>
-
-            <a href="./Articles/index.html?category=technology">
-                More Technology →
-            </a>
-
-        </div>
-
-
-        <div class="three-column">
-
-
-            <article class="category-card">
-
-                <div class="small-image">
-                    AI
-                </div>
-
-                <span class="category">
-                    ARTIFICIAL INTELLIGENCE
-                </span>
-
-                <h3>
-                    Artificial Intelligence and the future of work
-                </h3>
-
-                <p>
-                    Understanding the rapidly evolving AI ecosystem.
-                </p>
-
-            </article>
-
-
-
-            <article class="category-card">
-
-                <div class="small-image">
-                    CYBER
-                </div>
-
-                <span class="category">
-                    CYBERSECURITY
-                </span>
-
-                <h3>
-                    Building a safer digital future
-                </h3>
-
-                <p>
-                    Cybersecurity, privacy and digital infrastructure.
-                </p>
-
-            </article>
-
-
-
-            <article class="category-card">
-
-                <div class="small-image">
-                    CHIPS
-                </div>
-
-                <span class="category">
-                    SEMICONDUCTORS
-                </span>
-
-                <h3>
-                    India's semiconductor ambitions
-                </h3>
-
-                <p>
-                    Exploring India's semiconductor ecosystem.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     POLICY
-===================================================== -->
-
-<section class="content-section dark-section"
-         id="policy">
-
-    <div class="container">
-
-        <div class="section-heading light-heading">
-
-            <h2>
-                POLICY
-            </h2>
-
-            <a href="./Articles/index.html?category=policy">
-                More Policy →
-            </a>
-
-        </div>
-
-
-        <div class="three-column">
-
-
-            <article class="policy-card">
-
-                <span class="category">
-                    POLICY EXPLAINED
-                </span>
-
-                <h3>
-                    Understanding government policies
-                </h3>
-
-                <p>
-                    Complex policies explained using facts,
-                    documents and context.
-                </p>
-
-            </article>
-
-
-
-            <article class="policy-card">
-
-                <span class="category">
-                    TECHNOLOGY POLICY
-                </span>
-
-                <h3>
-                    Technology, regulation and public policy
-                </h3>
-
-                <p>
-                    Examining developments at the intersection
-                    of technology and policy.
-                </p>
-
-            </article>
-
-
-
-            <article class="policy-card">
-
-                <span class="category">
-                    EDUCATION
-                </span>
-
-                <h3>
-                    Education and research policy
-                </h3>
-
-                <p>
-                    Important developments in India's education
-                    and research ecosystem.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     BUSINESS
-===================================================== -->
-
-<section class="content-section"
-         id="business">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <h2>
-                BUSINESS
-            </h2>
-
-            <a href="./Articles/index.html?category=business">
-                More Business →
-            </a>
-
-        </div>
-
-
-        <div class="three-column">
-
-
-            <article class="category-card">
-
-                <div class="small-image">
-                    STARTUPS
-                </div>
-
-                <span class="category">
-                    STARTUPS
-                </span>
-
-                <h3>
-                    India's startup ecosystem
-                </h3>
-
-                <p>
-                    Entrepreneurs, startups and emerging businesses.
-                </p>
-
-            </article>
-
-
-
-            <article class="category-card">
-
-                <div class="small-image">
-                    INDUSTRY
-                </div>
-
-                <span class="category">
-                    INDUSTRY
-                </span>
-
-                <h3>
-                    Industry and innovation
-                </h3>
-
-                <p>
-                    Industrial developments and technology-led growth.
-                </p>
-
-            </article>
-
-
-
-            <article class="category-card">
-
-                <div class="small-image">
-                    ECONOMY
-                </div>
-
-                <span class="category">
-                    ECONOMY
-                </span>
-
-                <h3>
-                    Business and economic developments
-                </h3>
-
-                <p>
-                    Important developments affecting businesses and markets.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     RESEARCH & INNOVATION
-===================================================== -->
-
-<section class="research-section"
-         id="research">
-
-    <div class="container">
-
-        <div class="research-content">
-
-            <span>
-                BHARAT FRONTIERS
-            </span>
-
-            <h2>
-                Research & Innovation
+                The ideas behind the headlines
             </h2>
 
             <p>
-                Discover research, ideas, inventions and innovations
-                shaping India and the world.
+                BHARAT FRONTIERS goes beyond the daily news cycle to examine
+                the research, ideas, technologies and decisions that shape
+                India's future.
             </p>
 
-            <a href="./Articles/index.html"
-               class="light-button">
-                Explore Research →
+            <a href="./Articles/index.html" class="read-link">
+                Explore the publication →
             </a>
+        </div>
 
+        <div class="editors-choice-image">
+            <img src="./Images/Articles/research-next-decade.png"
+                 alt="Research and the next decade"
+                 loading="lazy">
         </div>
 
     </div>
@@ -909,495 +815,190 @@
 </section>
 
 
-
-<!-- =====================================================
-     ANALYSIS
-===================================================== -->
-
-<section class="content-section"
-         id="analysis">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <h2>
-                ANALYSIS
-            </h2>
-
-            <a href="./Articles/index.html?type=analysis">
-                Explore Analysis →
-            </a>
-
-        </div>
-
-
-        <div class="analysis-grid">
-
-
-            <article class="analysis-card">
-
-                <span class="category">
-                    TECHNOLOGY ANALYSIS
-                </span>
-
-                <h3>
-                    What the next decade of AI could mean for India
-                </h3>
-
-                <p>
-                    Context-driven analysis of technology,
-                    research and industry developments.
-                </p>
-
-                <a href="./Articles/article.html?id=bf001">
-                    Read Analysis →
-                </a>
-
-            </article>
-
-
-
-            <article class="analysis-card">
-
-                <span class="category">
-                    POLICY ANALYSIS
-                </span>
-
-                <h3>
-                    Understanding policy through data and evidence
-                </h3>
-
-                <p>
-                    Breaking down complex policy developments
-                    and their potential implications.
-                </p>
-
-                <a href="./Articles/article.html?id=bf007">
-                    Read Analysis →
-                </a>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     INNOVATION
-===================================================== -->
-
-<section class="content-section alternate-section"
-         id="innovation">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <h2>
-                INNOVATION
-            </h2>
-
-            <a href="./Articles/index.html?category=innovation">
-                More Innovation →
-            </a>
-
-        </div>
-
-
-        <div class="innovation-box">
-
-            <h3>
-                Ideas that could shape tomorrow
-            </h3>
-
-            <p>
-                From university laboratories to startups and industry,
-                Bharat Frontiers follows ideas moving from research
-                toward real-world applications.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     EXPLAINED
-===================================================== -->
-
-<section class="content-section"
-         id="explained">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <h2>
-                EXPLAINED
-            </h2>
-
-            <a href="./Articles/index.html?type=explainer">
-                Explore →
-            </a>
-
-        </div>
-
-
-        <div class="explained-grid">
-
-
-            <article>
-
-                <span class="category">
-                    EXPLAINER
-                </span>
-
-                <h3>
-                    What is Artificial Intelligence?
-                </h3>
-
-                <p>
-                    A simple explanation of AI and how modern
-                    artificial intelligence systems work.
-                </p>
-
-            </article>
-
-
-
-            <article>
-
-                <span class="category">
-                    EXPLAINER
-                </span>
-
-                <h3>
-                    What is a Semiconductor?
-                </h3>
-
-                <p>
-                    Understanding the technology behind
-                    modern electronics.
-                </p>
-
-                <a href="./Articles/article.html?id=bf010">
-                    Read Explainer →
-                </a>
-
-            </article>
-
-
-
-            <article>
-
-                <span class="category">
-                    EXPLAINER
-                </span>
-
-                <h3>
-                    What is Generative AI?
-                </h3>
-
-                <p>
-                    Understanding how generative AI systems
-                    create text, images and other content.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
+<!-- =========================================================
      DIGITAL EDITION
-===================================================== -->
+========================================================= -->
+<section class="front-page-section digital-edition-section">
 
-<section class="digital-edition"
-         id="digital-edition">
+    <div class="site-shell">
 
-    <div class="container digital-content">
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">THE PAPER</span>
+                <h2>Digital Edition</h2>
+            </div>
+
+            <a href="./Digital-Edition/index.html" class="section-link">
+                View archive →
+            </a>
+        </div>
+
+        <div class="edition-feature">
+
+            <div class="edition-cover">
+                <img src="./Images/digital-edition.jpg"
+                     alt="BHARAT FRONTIERS Digital Edition"
+                     loading="eager">
+            </div>
+
+            <div class="edition-copy">
+
+                <span class="edition-date">SEPTEMBER 2026</span>
+
+                <h3>
+                    BHARAT FRONTIERS
+                    <span>The Knowledge Post</span>
+                </h3>
+
+                <p>
+                    A curated digital edition bringing together the month's
+                    research, technology, policy, business and ideas.
+                </p>
+
+                <div class="edition-meta">
+                    <span>Research</span>
+                    <span>Technology</span>
+                    <span>Policy</span>
+                    <span>Ideas</span>
+                </div>
+
+                <a href="./Digital-Edition/edition.html?edition=2026-09"
+                   class="edition-button">
+                    Read the September Edition →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEWSLETTER
+========================================================= -->
+<section class="front-page-section newsletter-section" id="newsletter">
+
+    <div class="site-shell newsletter-inner">
 
         <div>
-
-            <span>
-                DIGITAL EDITION
-            </span>
-
-            <h2>
-                The Bharat Frontiers Knowledge Post
-            </h2>
-
+            <span class="section-kicker">THE KNOWLEDGE LETTER</span>
+            <h2>Ideas worth knowing.</h2>
             <p>
-                A curated collection of important stories,
-                research and analysis.
+                A concise selection of research, technology, policy,
+                business and ideas from BHARAT FRONTIERS.
             </p>
-
         </div>
 
+        <form id="newsletterForm" class="newsletter-form">
 
-        <a href="./Digital-Edition/Issues/Issue-001/index.html"
-           class="edition-button">
+            <label for="emailInput">Your email address</label>
 
-            Read Latest Edition →
+            <div class="newsletter-row">
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="you@example.com"
+                    autocomplete="email">
 
-        </a>
+                <button type="submit">Subscribe</button>
+            </div>
 
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     NEWSLETTER
-===================================================== -->
-
-<section class="newsletter">
-
-    <div class="container">
-
-        <h2>
-            Stay Ahead of the Knowledge Frontier
-        </h2>
-
-        <p>
-            Get important science, technology, policy and
-            business stories delivered to you.
-        </p>
-
-
-        <form id="newsletterForm">
-
-            <input
-                type="email"
-                id="emailInput"
-                placeholder="Enter your email address"
-                required
-            >
-
-            <button type="submit">
-                Subscribe
-            </button>
+            <p id="subscribeMessage" class="subscribe-message"></p>
 
         </form>
 
-
-        <div id="subscribeMessage"></div>
-
     </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      ABOUT
-===================================================== -->
+========================================================= -->
+<section class="about-section" id="about">
 
-<section class="about-section"
-         id="about">
+    <div class="site-shell about-inner">
 
-    <div class="container">
+        <div>
+            <img
+                src="./Assets/Logos/bharat-frontiers-official-logo.png"
+                alt="BHARAT FRONTIERS — The Knowledge Post"
+                class="footer-logo">
+        </div>
 
-        <div class="about-content">
-
-            <span>
-                ABOUT BHARAT FRONTIERS
-            </span>
-
-            <h2>
-                The Knowledge Post
-            </h2>
-
+        <div class="about-copy">
+            <span class="section-kicker">ABOUT BHARAT FRONTIERS</span>
+            <h2>The Knowledge Post</h2>
             <p>
-                Bharat Frontiers is a digital-first publication
-                focused on science, technology, policy and business.
+                BHARAT FRONTIERS is a digital knowledge publication focused
+                on the ideas, research, technologies, policies and enterprises
+                shaping India and the wider world.
             </p>
-
-            <p>
-                Our goal is to bring together news, research,
-                analysis and innovation in a clear and accessible format.
-            </p>
-
-            <a href="./Pages/about.html">
-                Learn More About Us →
-            </a>
-
         </div>
 
     </div>
 
 </section>
-
-
 
 </main>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
+<footer class="site-footer">
 
-<footer>
-
-    <div class="container footer-grid">
-
-
-        <!-- FOOTER BRAND -->
+    <div class="site-shell footer-grid">
 
         <div class="footer-brand">
-
-            <h2>
-                BHARAT FRONTIERS
-            </h2>
-
-            <p>
-                The Knowledge Post
-            </p>
-
-            <p>
-                Science • Technology • Policy • Business
-            </p>
-
-
-            <div class="social-icons">
-
-                <a href="#"
-                   aria-label="X">
-                    X
-                </a>
-
-                <a href="#"
-                   aria-label="LinkedIn">
-                    in
-                </a>
-
-                <a href="#"
-                   aria-label="YouTube">
-                    ▶
-                </a>
-
-                <a href="#"
-                   aria-label="Instagram">
-                    ◎
-                </a>
-
-            </div>
-
+            <div class="footer-wordmark">BHARAT FRONTIERS</div>
+            <p>The Knowledge Post</p>
         </div>
 
-
-
-        <!-- PUBLICATION -->
-
         <div class="footer-column">
-
-            <h3>
-                Publication
-            </h3>
-
-            <a href="./Pages/about.html">
-                About Us
-            </a>
-
-            <a href="#">
-                Editorial Team
-            </a>
-
-            <a href="./Pages/contact.html">
-                Contact
-            </a>
-
-            <a href="#">
-                Advertise
-            </a>
-
+            <h3>Explore</h3>
+            <a href="./Articles/index.html">Articles</a>
+            <a href="./Articles/category.html?category=Research">Research</a>
+            <a href="./Articles/category.html?category=Technology">Technology</a>
+            <a href="./Articles/category.html?category=Policy">Policy</a>
+            <a href="./Articles/category.html?category=Culture">Culture</a>
         </div>
 
-
-
-        <!-- EDITORIAL -->
-
         <div class="footer-column">
-
-            <h3>
-                Editorial
-            </h3>
-
-            <a href="#">
-                Editorial Policy
-            </a>
-
-            <a href="#">
-                Fact Checking
-            </a>
-
-            <a href="#">
-                Corrections
-            </a>
-
-            <a href="#">
-                AI Policy
-            </a>
-
+            <h3>Publication</h3>
+            <a href="./Digital-Edition/index.html">Digital Edition</a>
+            <a href="./Digital-Edition/edition.html?edition=2026-09">Current Issue</a>
+            <a href="./Digital-Edition/index.html">Newsletter</a>
+            <a href="./Articles/index.html">About</a>
+            <a href="./Pages/contact.html">Contact</a>
         </div>
 
-
-
-        <!-- LEGAL -->
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <a href="./Pages/contact.html">Contact the Editorial Office</a>
+        </div>
 
         <div class="footer-column">
-
-            <h3>
-                Legal
-            </h3>
-
-            <a href="./Pages/privacy.html">
-                Privacy Policy
-            </a>
-
-            <a href="#">
-                Terms & Conditions
-            </a>
-
-            <a href="#">
-                Copyright Policy
-            </a>
-
-            <a href="#">
-                Grievance Redressal
-            </a>
-
+            <h3>Connect With Us</h3>
+            <a href="https://www.facebook.com/bharatfrontiers" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/bharatfrontiers" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://x.com/bharatfrontiers" target="_blank" rel="noopener noreferrer">X</a>
         </div>
 
     </div>
 
-
-
-    <!-- FOOTER BOTTOM -->
-
-    <div class="container footer-bottom">
+    <div class="site-shell footer-bottom">
 
         <p>
-            © 2026 Bharat Frontiers. All Rights Reserved.
+            © <span class="current-year">2026</span> BHARAT FRONTIERS.
+            All rights reserved.
         </p>
 
         <p>
-            News | Research | Analysis | Innovation
+            The Knowledge Post
         </p>
 
     </div>
@@ -1405,14 +1006,28 @@
 </footer>
 
 
-
-<!-- =====================================================
-     MAIN JAVASCRIPT
-===================================================== -->
-
 <script src="./script.js"></script>
 
+<script>
+/* BHARAT FRONTIERS MONTHLY ISSUE RENDERER: permanent topics, monthly stories */
+(async()=>{
+ try{
+  let issueData;
+  try{issueData=await fetch('./api/issues').then(r=>r.ok?r.json():Promise.reject()).then(x=>x.issues?.find(i=>i.status==='current')||x.issues?.[0]);}catch(e){issueData=(await fetch('./Data/monthly-issues.json')).then(r=>r.json()).then(x=>x.find(i=>i.status==='current')||x[0]);}
+  if(!issueData)return;
+  let articles;
+  try{articles=(await fetch('./api/issues?id='+encodeURIComponent(issueData.id)).then(r=>r.json())).articles||[];}catch(e){const all=await fetch('./Data/articles.json').then(r=>r.json());articles=(issueData.articleSlugs||[]).map(sl=>all.find(a=>a.slug===sl)).filter(Boolean);}
+  if(!articles.length)return;
+  const bySlug=new Map(articles.map(a=>[a.slug,a]));
+  const links=[...document.querySelectorAll('a[href*="Articles/article.html?slug="]')];
+  const unique=[]; const seen=new Set(); for(const a of links){const m=a.href.match(/[?&]slug=([^&]+)/);const sl=m&&decodeURIComponent(m[1]);if(sl&&!seen.has(sl)){seen.add(sl);unique.push(sl)}}
+  unique.forEach((oldSlug,i)=>{const a=articles[i%articles.length]; if(!a)return; for(const el of links.filter(x=>x.href.includes('slug='+encodeURIComponent(oldSlug)))){el.href='./Articles/article.html?slug='+encodeURIComponent(a.slug); const text=el.querySelector('h3,h2')||el; if(text.childElementCount===0)text.textContent=a.title; const img=el.querySelector('img'); if(img&&a.image)img.src='./Articles/'+a.image;}});
+  const date=document.getElementById('publicationDate'); if(date)date.textContent=(issueData.month_label||issueData.title||'CURRENT ISSUE').toUpperCase();
+  const badge=document.querySelector('.lead-section .section-kicker'); if(badge)badge.textContent=(issueData.month_label||'CURRENT ISSUE').toUpperCase();
+  document.querySelectorAll('a[href="./Digital-Edition/index.html"],a[href="Digital-Edition/index.html"]').forEach(a=>{a.textContent='Digital Edition';});
+ }catch(e){console.warn('Monthly issue fallback active',e)}
+})();
+</script>
 
 </body>
-
 </html>

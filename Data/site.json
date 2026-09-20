@@ -1,0 +1,28 @@
+{
+  "siteName": "BHARAT FRONTIERS",
+  "tagline": "The Knowledge Post",
+  "description": "Science, technology, policy, research, business and society — explained through evidence and original journalism.",
+  "baseUrl": "https://YOUR-DOMAIN.example",
+  "logo": "./Assets/Logos/bharat-frontiers-official-logo.png",
+  "articleData": "./Data/articles.json",
+  "categoriesData": "./Data/categories.json",
+  "editionData": "./Digital-Edition/editions.json",
+  "workflow": [
+    "Draft",
+    "Review",
+    "Approved",
+    "Published",
+    "Archived"
+  ],
+  "automation": {
+    "enabled": true,
+    "provider": "Cloudflare Workers AI",
+    "sourceDiscovery": "Google News RSS + submitted URLs",
+    "requiresReview": true
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/bharatfrontiers",
+    "instagram": "https://www.instagram.com/bharatfrontiers",
+    "x": "https://x.com/bharatfrontiers"
+  }
+}

@@ -6,15 +6,64 @@
     "section": "technology",
     "type": "analysis",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": true,
-    "status": "draft",
-    "summary": "An examination of the technologies, research ecosystems and innovations shaping India's next decade.",
-    "image": "../Images/technology-frontiers.jpg",
-    "sources": []
+    "image": "technology-frontiers.png",
+    "summary": "An evidence-led look at the technologies, research ecosystems and industrial capabilities shaping India's next technology frontier.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "India’s Emerging Technology Ecosystem",
+        "publisher": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2276447&lang=1&reg=3",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "S&T Ecosystem in India",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/st-ecosystem-india",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "Vision & Mission",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/vision-mission",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "technology",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>India's emerging technology landscape is increasingly organised around mission-led programmes, research institutions, industry participation and digital infrastructure. The Department of Science and Technology describes the national science and technology ecosystem as a network that includes central government departments, research institutes, private-sector R&D, state institutions and other organisations. [1] <sup>[1]</sup></p><p>Recent government material identifies artificial intelligence, semiconductors, quantum technologies, cybersecurity, robotics, biotechnology, clean energy and space among the areas receiving policy and programme attention. [2] The significance of this approach is that capability is being built across research, infrastructure, skills and application rather than through a single technology programme.</p><p>For BHARAT FRONTIERS, the important question is how these separate capabilities connect. A research result becomes more consequential when institutions can translate it into prototypes, products, services or public applications. DST's stated mission includes support for basic science, technology-led innovation, startups and emerging areas of science and technology. [3]</p><p>The next phase of India's technology story can therefore be understood as an ecosystem challenge: linking laboratories, universities, companies, public institutions and users while maintaining attention to evidence, security and responsible deployment.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "India’s Emerging Technology Ecosystem",
+        "title": "India’s Emerging Technology Ecosystem",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2276447&lang=1&reg=3"
+      },
+      {
+        "about": "S&T Ecosystem in India",
+        "title": "S&T Ecosystem in India",
+        "url": "https://dst.gov.in/st-ecosystem-india"
+      },
+      {
+        "about": "Vision & Mission",
+        "title": "Vision & Mission",
+        "url": "https://dst.gov.in/vision-mission"
+      }
+    ]
   },
-
   {
     "id": "bf002",
     "title": "Research in the Next Decade",
@@ -22,15 +71,64 @@
     "section": "science",
     "type": "analysis",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
-    "featured": false,
-    "status": "draft",
-    "summary": "How India's research ecosystem is evolving across science, technology and innovation.",
-    "image": "../Images/research.jpg",
-    "sources": []
+    "date": "2026-09-20",
+    "issue": "2026-09",
+    "featured": true,
+    "image": "research-next-decade.png",
+    "summary": "How research priorities, institutions, talent and infrastructure can shape the next decade of discovery and application.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "S&T Ecosystem in India",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/st-ecosystem-india",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "National Quantum Mission",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/node/7223",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "Research, Development, and Innovation (RDI) Cell",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/node/8255",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "science",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>Research is increasingly being treated as a long-term capability rather than only a route to individual discoveries. India's science and technology system includes research institutes, university and government structures, industry R&D and public programmes that interact across disciplines. [1] <sup>[1]</sup></p><p>The National Quantum Mission illustrates the mission approach. Approved with an outlay of ₹6,003.65 crore for 2023–24 to 2030–31, it targets quantum computing, communications, sensing and related technologies. [2] Such programmes combine scientific objectives with infrastructure, talent and application goals.</p><p>The Research, Development and Innovation scheme also seeks to increase private-sector participation in high-impact R&D, including deep technologies, AI, biotechnology and energy-related technologies. [3] This creates a pathway between public research priorities and industrial experimentation.</p><p>Over the next decade, the value of research will depend not only on the number of papers or laboratories, but also on reproducibility, interdisciplinary collaboration, skilled people, research infrastructure and the ability to translate validated knowledge into useful outcomes.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "S&T Ecosystem in India",
+        "title": "S&T Ecosystem in India",
+        "url": "https://dst.gov.in/st-ecosystem-india"
+      },
+      {
+        "about": "National Quantum Mission",
+        "title": "National Quantum Mission",
+        "url": "https://dst.gov.in/node/7223"
+      },
+      {
+        "about": "Research, Development, and Innovation (RDI) Cell",
+        "title": "Research, Development, and Innovation (RDI) Cell",
+        "url": "https://dst.gov.in/node/8255"
+      }
+    ]
   },
-
   {
     "id": "bf003",
     "title": "The Frontiers of Modern Scientific Research",
@@ -38,15 +136,52 @@
     "section": "science",
     "type": "feature",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": false,
-    "status": "draft",
-    "summary": "New research is expanding the boundaries of what scientists can observe, measure and understand.",
-    "image": "../Images/science.jpg",
-    "sources": []
+    "image": "scientific-research.png",
+    "summary": "A clear guide to the changing boundaries of scientific research and the tools expanding what researchers can investigate.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "S&T Ecosystem in India",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/st-ecosystem-india",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "Promotion of Scientific Temperament, Research and Innovation",
+        "publisher": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245230&lang=1&reg=1",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "science",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>Modern scientific research is becoming more interdisciplinary. India's official science and technology ecosystem connects departments and institutions spanning space, atomic energy, biotechnology, earth sciences, defence, health and agriculture alongside the Department of Science and Technology. [1] <sup>[1]</sup></p><p>Emerging programmes increasingly cross traditional boundaries. Government material lists areas such as quantum technologies, AI, robotics, biotechnology, synthetic biology, critical minerals, clean energy and space among strategic research domains. [2]</p><p>This creates a practical need for shared infrastructure, data, skilled researchers and mechanisms that allow findings from one discipline to be tested or reused in another. The challenge is not simply discovering new knowledge; it is creating reliable pathways for knowledge to move between fields.</p><p>A modern research agenda therefore combines foundational science with translational work. The balance matters: foundational research expands the knowledge base, while applied and translational programmes help determine whether a discovery can become a validated technology or solution.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "S&T Ecosystem in India",
+        "title": "S&T Ecosystem in India",
+        "url": "https://dst.gov.in/st-ecosystem-india"
+      },
+      {
+        "about": "Promotion of Scientific Temperament, Research and Innovation",
+        "title": "Promotion of Scientific Temperament, Research and Innovation",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245230&lang=1&reg=1"
+      }
+    ]
   },
-
   {
     "id": "bf004",
     "title": "How Research Becomes Innovation",
@@ -54,15 +189,52 @@
     "section": "research",
     "type": "explainer",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": false,
-    "status": "draft",
-    "summary": "Understanding the path from scientific knowledge to practical innovation.",
-    "image": "../Images/innovation.jpg",
-    "sources": []
+    "image": "research-innovation.png",
+    "summary": "Understanding the path from research and discovery to prototypes, products, services and measurable public value.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "Technology Translation, and Innovation Division",
+        "publisher": "Department of Science & Technology / NIDHI",
+        "url": "https://nidhi.dst.gov.in/tti-dst/",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "Research, Development, and Innovation (RDI) Cell",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/node/8255",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "research",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>Research becomes innovation through a chain of validation, translation and adoption. DST's Technology Translation and Innovation division describes support for moving proof-of-concepts toward advanced prototypes, validation and demonstration, while also encouraging collaboration between academia and industry. [1] <sup>[1]</sup></p><p>This translation stage is where many scientific ideas encounter practical constraints: engineering reliability, cost, manufacturability, regulation, user needs and intellectual-property questions. A successful laboratory result is therefore an important milestone, but not automatically a finished product.</p><p>India's NIDHI programme is one example of an institutional mechanism intended to nurture innovators and startups and help technologies move toward practical applications. [1] The RDI scheme adds another layer by encouraging private-sector participation in high-impact R&D. [2]</p><p>Innovation is best understood as a process. Research supplies knowledge and evidence; engineering turns that knowledge into workable systems; users and markets test usefulness; and institutions provide the infrastructure, funding and standards needed for responsible scale.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "Technology Translation, and Innovation Division",
+        "title": "Technology Translation, and Innovation Division",
+        "url": "https://nidhi.dst.gov.in/tti-dst/"
+      },
+      {
+        "about": "Research, Development, and Innovation (RDI) Cell",
+        "title": "Research, Development, and Innovation (RDI) Cell",
+        "url": "https://dst.gov.in/node/8255"
+      }
+    ]
   },
-
   {
     "id": "bf005",
     "title": "Artificial Intelligence: From Tool to Infrastructure",
@@ -70,15 +242,52 @@
     "section": "technology",
     "type": "feature",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": true,
-    "status": "draft",
-    "summary": "How artificial intelligence is moving beyond individual applications into broader digital infrastructure.",
-    "image": "../Images/ai.jpg",
-    "sources": []
+    "image": "ai-infrastructure.png",
+    "summary": "Why AI is increasingly being understood as an infrastructure layer involving data, compute, models, applications, skills and governance.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "Artificial Intelligence, Research and Innovation",
+        "publisher": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2298231&lang=1&reg=1",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "AI Governance and Economic Group",
+        "publisher": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2252739&lang=1&reg=1",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "technology",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>Artificial intelligence is moving from a collection of specialised applications toward infrastructure that can support many sectors. Government programmes in India currently cover AI alongside quantum technologies, semiconductors, biotechnology, robotics and other emerging fields. [1] <sup>[1]</sup></p><p>The IndiaAI-related policy landscape also includes institutional work on AI governance. In April 2026, the Government of India announced an AI Governance and Economic Group as an inter-ministerial mechanism for coordinating AI governance policy. [2]</p><p>At the infrastructure level, AI requires compute, data, networks, skilled people and evaluation systems. At the application level, it requires domain knowledge and safeguards. These layers interact: better infrastructure can expand experimentation, while real-world deployment exposes gaps in reliability, security, privacy and accountability.</p><p>The infrastructure view therefore changes the question from 'Where can AI be used?' to 'What capabilities are needed to use AI responsibly at scale?' That includes technical capacity as well as governance, skills and measurement.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "Artificial Intelligence, Research and Innovation",
+        "title": "Artificial Intelligence, Research and Innovation",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2298231&lang=1&reg=1"
+      },
+      {
+        "about": "AI Governance and Economic Group",
+        "title": "AI Governance and Economic Group",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2252739&lang=1&reg=1"
+      }
+    ]
   },
-
   {
     "id": "bf006",
     "title": "Semiconductors and Strategic Technology",
@@ -86,15 +295,40 @@
     "section": "technology",
     "type": "analysis",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": true,
-    "status": "draft",
-    "summary": "Why semiconductor capability matters to modern computing and technology ecosystems.",
-    "image": "../Images/semiconductors.jpg",
-    "sources": []
+    "image": "semiconductors.png",
+    "summary": "An accessible examination of semiconductor design, fabrication, packaging, supply chains and industrial capability.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "India Semiconductor Mission",
+        "publisher": "India Semiconductor Mission",
+        "url": "https://ism.gov.in/",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "technology",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>Semiconductors are a foundational technology for electronics, communications, computing and many industrial systems. India's Semiconductor Mission describes its objective as building a semiconductor and display ecosystem and positioning India as a hub for electronics manufacturing and design. [1] <sup>[1]</sup></p><p>The programme covers several parts of the value chain, including semiconductor fabrication, display fabrication, compound semiconductors and packaging, as well as design support. The official mission describes fiscal support mechanisms for approved projects and a Design Linked Incentive scheme for semiconductor design. [1]</p><p>The semiconductor story is therefore broader than building a fabrication plant. It includes design capability, packaging and testing, materials, equipment, talent, supply-chain relationships and reliable infrastructure. These components have different technical and investment requirements.</p><p>For a technology publication, the important development is the emergence of an ecosystem approach. Semiconductor capability is built over time through connected capabilities rather than through a single facility or announcement.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "India Semiconductor Mission",
+        "title": "India Semiconductor Mission",
+        "url": "https://ism.gov.in/"
+      }
+    ]
   },
-
   {
     "id": "bf007",
     "title": "Governing Emerging Technologies",
@@ -102,63 +336,211 @@
     "section": "policy",
     "type": "analysis",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": false,
-    "status": "draft",
-    "summary": "The policy questions created by rapidly developing technologies.",
-    "image": "../Images/policy.jpg",
-    "sources": []
+    "image": "technology-policy.png",
+    "summary": "The policy questions raised when new technologies affect data, competition, safety, infrastructure, innovation and society.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "Emerging Technologies",
+        "publisher": "National Informatics Centre",
+        "url": "https://www.nic.gov.in/emerging-technologies/",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "AI Governance and Economic Group",
+        "publisher": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2252739&lang=1&reg=1",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "Responsible and Secure Digital Environment",
+        "publisher": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245230&lang=1&reg=1",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "policy",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>Emerging technologies create policy questions alongside technical opportunities. India's official technology institutions describe work spanning AI, data analytics, blockchain and other technologies used in governance. [1] <sup>[1]</sup></p><p>AI governance has become a specific institutional area. In April 2026, the Government announced an inter-ministerial AI Governance and Economic Group to coordinate policy development and address economic and labour-market dimensions of AI. [2]</p><p>Governance also involves existing legal and regulatory frameworks. Government statements note the Information Technology framework and the Digital Personal Data Protection Act, 2023 as parts of India's digital regulatory environment. [3]</p><p>The policy challenge is to match governance mechanisms to the technology and its context. Questions of safety, privacy, accountability, competition, security and access can differ between applications, so evidence-based rules and periodic review are important as technologies change.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "Emerging Technologies",
+        "title": "Emerging Technologies",
+        "url": "https://www.nic.gov.in/emerging-technologies/"
+      },
+      {
+        "about": "AI Governance and Economic Group",
+        "title": "AI Governance and Economic Group",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2252739&lang=1&reg=1"
+      },
+      {
+        "about": "Responsible and Secure Digital Environment",
+        "title": "Responsible and Secure Digital Environment",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245230&lang=1&reg=1"
+      }
+    ]
   },
-
   {
     "id": "bf008",
     "title": "Can Deep-Tech Become Big Business?",
     "slug": "can-deep-tech-become-big-business",
-    "section": "business",
+    "section": "Business",
     "type": "analysis",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": true,
-    "status": "draft",
-    "summary": "Examining the relationship between deep-tech research, capital, entrepreneurship and commercialisation.",
-    "image": "../Images/deep-tech.jpg",
-    "sources": []
+    "image": "deep-tech-business.png",
+    "summary": "How research, intellectual property, capital, startups, manufacturing and markets interact in deep-tech commercialisation.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "National Deep Tech Startup Policy Framework",
+        "publisher": "Office of Principal Scientific Adviser",
+        "url": "https://www.psa.gov.in/deep-tech-policy",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "Deep Tech Startup Policy",
+        "publisher": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227066&lang=1&reg=3",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "business",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>Deep technology is built around substantial scientific or engineering advances and often takes longer to commercialise than conventional software products. India's National Deep Tech Startup Policy framework identifies security, a knowledge-driven economy, national capability and ethical innovation as four pillars. [1] <sup>[1]</sup></p><p>The Research, Development and Innovation scheme is another relevant mechanism. The Government says the scheme has a ₹1 lakh crore corpus over six years and includes deep technologies such as quantum computing, robotics and space, alongside AI, biotechnology and energy transition. [2]</p><p>Commercialisation depends on more than technical novelty. Deep-tech companies may need specialised equipment, long development cycles, testing, certification, intellectual property, industrial partnerships and patient capital. These requirements can make the path from laboratory result to scalable business different from that of a typical digital product.</p><p>The business opportunity therefore sits at the intersection of scientific capability and execution. Policy support can reduce some barriers, but long-term commercial success still depends on validated technology, customers, manufacturing or deployment capability and sustainable economics.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "National Deep Tech Startup Policy Framework",
+        "title": "National Deep Tech Startup Policy Framework",
+        "url": "https://www.psa.gov.in/deep-tech-policy"
+      },
+      {
+        "about": "Deep Tech Startup Policy",
+        "title": "Deep Tech Startup Policy",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227066&lang=1&reg=3"
+      }
+    ]
   },
-
   {
     "id": "bf009",
     "title": "From Laboratory to Society",
     "slug": "from-laboratory-to-society",
-    "section": "research",
+    "section": "Culture",
     "type": "feature",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": true,
-    "status": "draft",
-    "summary": "How research moves from laboratories toward products, services and public value.",
-    "image": "../Images/laboratory.jpg",
-    "sources": []
+    "image": "laboratory-to-society.png",
+    "summary": "The journey from scientific research to real-world applications across healthcare, energy, agriculture, mobility and public services.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "Technology Translation, and Innovation Division",
+        "publisher": "Department of Science & Technology / NIDHI",
+        "url": "https://nidhi.dst.gov.in/tti-dst/",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "Vision & Mission",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/vision-mission",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "research",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>Moving a scientific result into society requires translation. DST's Technology Translation and Innovation division explicitly focuses on taking proof-of-concepts toward prototypes, validation and demonstration and on collaboration among academia, industry and other stakeholders. [1] <sup>[1]</sup></p><p>The process can involve several stages: reproducible research, engineering, testing, standards, deployment, maintenance and user feedback. Each stage can reveal constraints that are not visible in a laboratory setting.</p><p>Public institutions also play a role in building infrastructure and human capability. DST describes its mission as supporting basic research, S&T infrastructure, technology development, innovation and startups. [2]</p><p>The laboratory-to-society journey is therefore a system rather than a single handoff. Strong connections among researchers, engineers, entrepreneurs, institutions and users can help useful technologies move beyond proof-of-concept while keeping evidence and safety central.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "Technology Translation, and Innovation Division",
+        "title": "Technology Translation, and Innovation Division",
+        "url": "https://nidhi.dst.gov.in/tti-dst/"
+      },
+      {
+        "about": "Vision & Mission",
+        "title": "Vision & Mission",
+        "url": "https://dst.gov.in/vision-mission"
+      }
+    ]
   },
-
   {
     "id": "bf010",
     "title": "What Is a Semiconductor?",
     "slug": "what-is-a-semiconductor",
-    "section": "explainer",
+    "section": "Science",
     "type": "explainer",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": true,
-    "status": "draft",
-    "summary": "A plain-language explanation of semiconductors, chips, fabrication and the technology ecosystem around them.",
-    "image": "../Images/chip.jpg",
-    "sources": []
+    "image": "what-is-a-semiconductor.png",
+    "summary": "A plain-language explanation of semiconductors, chips, wafers, fabrication and why these technologies matter.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "India Semiconductor Mission",
+        "publisher": "India Semiconductor Mission",
+        "url": "https://ism.gov.in/",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "explainer",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>A semiconductor is a material whose electrical conductivity can be controlled in ways that make it useful for electronic devices. Semiconductor devices form the basis of integrated circuits and many components used in modern computing and communications. <sup>[1]</sup></p><p>In practice, the semiconductor industry is an ecosystem rather than one manufacturing step. India's Semiconductor Mission covers fabs, display fabs, compound semiconductors, packaging and testing, and semiconductor design support. [1]</p><p>A chip can therefore depend on multiple capabilities: electronic design, specialised materials and equipment, wafer processing, packaging, testing and supporting supply chains. Different parts of the ecosystem require different skills and infrastructure.</p><p>Understanding semiconductors is useful because they connect fundamental materials science with everyday technologies. Phones, computers, vehicles, communications equipment and industrial systems all rely on semiconductor devices, making chip capability an important part of modern technology infrastructure.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "India Semiconductor Mission",
+        "title": "India Semiconductor Mission",
+        "url": "https://ism.gov.in/"
+      }
+    ]
   },
-
   {
     "id": "bf011",
     "title": "Can India Turn Technology Ambition Into Technological Capability?",
@@ -166,12 +548,62 @@
     "section": "analysis",
     "type": "analysis",
     "author": "BHARAT FRONTIERS Editorial Desk",
-    "date": "2026-09-18",
-    "issue": "001",
+    "date": "2026-09-20",
+    "issue": "2026-09",
     "featured": true,
-    "status": "draft",
-    "summary": "An evidence-based examination of the relationship between policy, funding, research, talent, infrastructure and industry.",
-    "image": "../Images/capability.jpg",
-    "sources": []
+    "image": "technology-ambition.png",
+    "summary": "An evidence-based framework for examining the relationship between policy, funding, research, talent, infrastructure and industry.",
+    "status": "published",
+    "sources": [
+      {
+        "title": "India’s Emerging Technology Ecosystem",
+        "publisher": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2276447&lang=1&reg=3",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "Vision & Mission",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/vision-mission",
+        "source_type": "official / primary",
+        "verified": 1
+      },
+      {
+        "title": "Research, Development, and Innovation (RDI) Cell",
+        "publisher": "Department of Science & Technology",
+        "url": "https://dst.gov.in/node/8255",
+        "source_type": "official / primary",
+        "verified": 1
+      }
+    ],
+    "content": "",
+    "tags": [
+      "analysis",
+      "India",
+      "knowledge",
+      "innovation"
+    ],
+    "content_html": "<p>Technology ambition becomes technological capability when goals are translated into institutions, infrastructure, skills, research programmes and measurable outcomes. India's Department of Science and Technology describes its mission around a connected science, technology and innovation ecosystem and support for emerging areas. [1] <sup>[1]</sup></p><p>Recent government material identifies AI, semiconductors, quantum technologies, supercomputing, cybersecurity and other fields as parts of India's emerging technology ecosystem. [2] These programmes operate alongside research institutions, private-sector R&D and public digital infrastructure.</p><p>Capability also depends on translation. The RDI scheme is designed to increase private-sector participation in high-impact research, while the semiconductor and quantum missions target specific technological capacities. [3]</p><p>A useful way to assess technological capability is therefore to look across the chain: research strength, engineering depth, talent, infrastructure, deployment, industrial participation and governance. Ambition provides direction; capability is built through sustained execution and evidence.</p>",
+    "published_at": "2026-09-20",
+    "updated_at": "2026-09-20",
+    "source_gate": "verified",
+    "more_info": [
+      {
+        "about": "India’s Emerging Technology Ecosystem",
+        "title": "India’s Emerging Technology Ecosystem",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2276447&lang=1&reg=3"
+      },
+      {
+        "about": "Vision & Mission",
+        "title": "Vision & Mission",
+        "url": "https://dst.gov.in/vision-mission"
+      },
+      {
+        "about": "Research, Development, and Innovation (RDI) Cell",
+        "title": "Research, Development, and Innovation (RDI) Cell",
+        "url": "https://dst.gov.in/node/8255"
+      }
+    ]
   }
 ]

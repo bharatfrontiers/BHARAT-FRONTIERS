@@ -1,0 +1,13 @@
+PRAGMA foreign_keys = ON;
+INSERT OR IGNORE INTO issues (id,title,month_label,status,cover_image,pdf_url,created_at,updated_at) VALUES ('2026-09','BHARAT FRONTIERS — September 2026','September 2026','current','./Digital-Edition/Digital-Edition.png','', '2026-09-20T00:00:00.000Z','2026-09-20T00:00:00.000Z');
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf001',1);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf002',2);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf003',3);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf004',4);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf005',5);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf006',6);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf007',7);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf008',8);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf009',9);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf010',10);
+INSERT OR IGNORE INTO issue_articles (issue_id,article_id,sort_order) VALUES ('2026-09','bf011',11);

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "2026-09",
+    "label": "September 2026",
+    "status": "current",
+    "pdf_url": "./BHARAT-FRONTIERS-September-2026-E-Paper.pdf",
+    "cover": "./Digital-Edition/Digital-Edition.png",
+    "articleSlugs": [
+      "indias-emerging-technology-frontiers",
+      "research-in-the-next-decade",
+      "frontiers-of-modern-scientific-research",
+      "how-research-becomes-innovation",
+      "artificial-intelligence-from-tool-to-infrastructure",
+      "semiconductors-and-strategic-technology",
+      "governing-emerging-technologies",
+      "can-deep-tech-become-big-business",
+      "from-laboratory-to-society",
+      "what-is-a-semiconductor",
+      "technology-ambition-to-technological-capability"
+    ]
+  }
+]

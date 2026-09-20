@@ -1,0 +1,24 @@
+[
+  {
+    "id": "2026-09",
+    "title": "September 2026 — Issue 001",
+    "date": "2026-09-20",
+    "cover": "./Digital-Edition.png",
+    "articleSlugs": [
+      "indias-emerging-technology-frontiers",
+      "research-in-the-next-decade",
+      "frontiers-of-modern-scientific-research",
+      "how-research-becomes-innovation",
+      "artificial-intelligence-from-tool-to-infrastructure",
+      "semiconductors-and-strategic-technology",
+      "governing-emerging-technologies",
+      "can-deep-tech-become-big-business",
+      "from-laboratory-to-society",
+      "what-is-a-semiconductor",
+      "technology-ambition-to-technological-capability"
+    ],
+    "pdf_url": "./BHARAT-FRONTIERS-September-2026-E-Paper.pdf",
+    "source_gate": "verified",
+    "description": "Monthly newsletter / e-paper covering the important developments in the issue period to date."
+  }
+]
