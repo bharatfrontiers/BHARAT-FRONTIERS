@@ -1,0 +1,177 @@
+[
+  {
+    "id": "bf001",
+    "title": "India's Emerging Technology Frontiers",
+    "slug": "indias-emerging-technology-frontiers",
+    "section": "technology",
+    "type": "analysis",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": true,
+    "status": "draft",
+    "summary": "An examination of the technologies, research ecosystems and innovations shaping India's next decade.",
+    "image": "../Images/technology-frontiers.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf002",
+    "title": "Research in the Next Decade",
+    "slug": "research-in-the-next-decade",
+    "section": "science",
+    "type": "analysis",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": false,
+    "status": "draft",
+    "summary": "How India's research ecosystem is evolving across science, technology and innovation.",
+    "image": "../Images/research.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf003",
+    "title": "The Frontiers of Modern Scientific Research",
+    "slug": "frontiers-of-modern-scientific-research",
+    "section": "science",
+    "type": "feature",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": false,
+    "status": "draft",
+    "summary": "New research is expanding the boundaries of what scientists can observe, measure and understand.",
+    "image": "../Images/science.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf004",
+    "title": "How Research Becomes Innovation",
+    "slug": "how-research-becomes-innovation",
+    "section": "research",
+    "type": "explainer",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": false,
+    "status": "draft",
+    "summary": "Understanding the path from scientific knowledge to practical innovation.",
+    "image": "../Images/innovation.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf005",
+    "title": "Artificial Intelligence: From Tool to Infrastructure",
+    "slug": "artificial-intelligence-from-tool-to-infrastructure",
+    "section": "technology",
+    "type": "feature",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": true,
+    "status": "draft",
+    "summary": "How artificial intelligence is moving beyond individual applications into broader digital infrastructure.",
+    "image": "../Images/ai.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf006",
+    "title": "Semiconductors and Strategic Technology",
+    "slug": "semiconductors-and-strategic-technology",
+    "section": "technology",
+    "type": "analysis",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": true,
+    "status": "draft",
+    "summary": "Why semiconductor capability matters to modern computing and technology ecosystems.",
+    "image": "../Images/semiconductors.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf007",
+    "title": "Governing Emerging Technologies",
+    "slug": "governing-emerging-technologies",
+    "section": "policy",
+    "type": "analysis",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": false,
+    "status": "draft",
+    "summary": "The policy questions created by rapidly developing technologies.",
+    "image": "../Images/policy.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf008",
+    "title": "Can Deep-Tech Become Big Business?",
+    "slug": "can-deep-tech-become-big-business",
+    "section": "business",
+    "type": "analysis",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": true,
+    "status": "draft",
+    "summary": "Examining the relationship between deep-tech research, capital, entrepreneurship and commercialisation.",
+    "image": "../Images/deep-tech.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf009",
+    "title": "From Laboratory to Society",
+    "slug": "from-laboratory-to-society",
+    "section": "research",
+    "type": "feature",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": true,
+    "status": "draft",
+    "summary": "How research moves from laboratories toward products, services and public value.",
+    "image": "../Images/laboratory.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf010",
+    "title": "What Is a Semiconductor?",
+    "slug": "what-is-a-semiconductor",
+    "section": "explainer",
+    "type": "explainer",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": true,
+    "status": "draft",
+    "summary": "A plain-language explanation of semiconductors, chips, fabrication and the technology ecosystem around them.",
+    "image": "../Images/chip.jpg",
+    "sources": []
+  },
+
+  {
+    "id": "bf011",
+    "title": "Can India Turn Technology Ambition Into Technological Capability?",
+    "slug": "technology-ambition-to-technological-capability",
+    "section": "analysis",
+    "type": "analysis",
+    "author": "BHARAT FRONTIERS Editorial Desk",
+    "date": "2026-09-18",
+    "issue": "001",
+    "featured": true,
+    "status": "draft",
+    "summary": "An evidence-based examination of the relationship between policy, funding, research, talent, infrastructure and industry.",
+    "image": "../Images/capability.jpg",
+    "sources": []
+  }
+]

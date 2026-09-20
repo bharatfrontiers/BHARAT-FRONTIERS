@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Newsletter | BHARAT FRONTIERS</title>
+
+    <meta name="description"
+          content="Subscribe to the BHARAT FRONTIERS newsletter.">
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <div class="brand">
+
+            <a href="../index.html">
+
+                <h1>
+                    BHARAT FRONTIERS
+                </h1>
+
+                <p>
+                    THE KNOWLEDGE POST
+                </p>
+
+            </a>
+
+        </div>
+
+
+        <nav class="main-navigation">
+
+            <a href="../index.html">Home</a>
+
+            <a href="../index.html#science">Science</a>
+
+            <a href="../index.html#technology">Technology</a>
+
+            <a href="../index.html#policy">Policy</a>
+
+            <a href="../index.html#business">Business</a>
+
+            <a href="../index.html#research">Research</a>
+
+            <a href="../index.html#analysis">Analysis</a>
+
+            <a href="../index.html#innovation">Innovation</a>
+
+            <a href="../Digital-Edition/index.html">
+                Digital Edition
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<div class="breaking-bar">
+
+    <div class="container breaking-content">
+
+        <span class="breaking-label">
+            NEWSLETTER
+        </span>
+
+        <div class="breaking-text">
+            BHARAT FRONTIERS — THE KNOWLEDGE POST
+        </div>
+
+    </div>
+
+</div>
+
+
+<main>
+
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    NEWSLETTER
+                </span>
+
+                <h2>
+                    Stay Ahead of the Frontiers
+                </h2>
+
+                <p>
+                    Important developments across Science, Technology,
+                    Policy, Business, Research and Innovation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="story-grid">
+
+
+            <article class="story-card">
+
+                <span class="category">
+                    BHARAT FRONTIERS
+                </span>
+
+                <h3>
+                    The Knowledge Post in Your Inbox
+                </h3>
+
+                <p>
+                    Receive selected stories and important developments
+                    from BHARAT FRONTIERS.
+                </p>
+
+                <p>
+                    Our newsletter brings together news, research,
+                    analysis, explainers and innovation.
+                </p>
+
+            </article>
+
+
+            <article class="story-card">
+
+                <span class="category">
+                    SUBSCRIBE
+                </span>
+
+                <h3>
+                    Join the Newsletter
+                </h3>
+
+
+                <form id="newsletterPageForm">
+
+                    <label for="newsletterEmail">
+                        Email Address
+                    </label>
+
+                    <br><br>
+
+                    <input
+                        type="email"
+                        id="newsletterEmail"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                    <br><br>
+
+                    <button
+                        type="submit"
+                        class="primary-button">
+
+                        Subscribe
+
+                    </button>
+
+                </form>
+
+
+                <p id="newsletterMessage"></p>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    COVERAGE
+                </span>
+
+                <h2>
+                    What We Cover
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="news-grid">
+
+
+            <article class="news-card">
+
+                <div class="card-image">
+                    SCIENCE
+                </div>
+
+                <div class="card-body">
+
+                    <span class="category">
+                        SCIENCE
+                    </span>
+
+                    <h3>
+                        Discovery & Research
+                    </h3>
+
+                    <p>
+                        Scientific developments and emerging areas
+                        of research.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <div class="card-image">
+                    TECHNOLOGY
+                </div>
+
+                <div class="card-body">
+
+                    <span class="category">
+                        TECHNOLOGY
+                    </span>
+
+                    <h3>
+                        Emerging Technology
+                    </h3>
+
+                    <p>
+                        AI, semiconductors, space, digital systems
+                        and deep technology.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <div class="card-image">
+                    POLICY
+                </div>
+
+                <div class="card-body">
+
+                    <span class="category">
+                        POLICY
+                    </span>
+
+                    <h3>
+                        Policy & Governance
+                    </h3>
+
+                    <p>
+                        Policies and decisions influencing science,
+                        technology and industry.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <div class="card-image">
+                    BUSINESS
+                </div>
+
+                <div class="card-body">
+
+                    <span class="category">
+                        BUSINESS
+                    </span>
+
+                    <h3>
+                        Business & Industry
+                    </h3>
+
+                    <p>
+                        Companies, entrepreneurship, investment
+                        and technology-driven industries.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<script>
+
+const newsletterForm =
+    document.getElementById("newsletterPageForm");
+
+const newsletterMessage =
+    document.getElementById("newsletterMessage");
+
+
+newsletterForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+        newsletterMessage.textContent =
+            "Thank you for subscribing to BHARAT FRONTIERS.";
+
+        newsletterForm.reset();
+
+    }
+);
+
+</script>
+
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <h2>
+                BHARAT FRONTIERS
+            </h2>
+
+            <p>
+                THE KNOWLEDGE POST
+            </p>
+
+            <p>
+                Science • Technology • Policy • Business
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Explore
+            </h3>
+
+            <a href="../index.html">Home</a>
+
+            <a href="../Digital-Edition/index.html">
+                Digital Edition
+            </a>
+
+            <a href="../index.html#science">Science</a>
+
+            <a href="../index.html#technology">Technology</a>
+
+            <a href="../index.html#policy">Policy</a>
+
+            <a href="../index.html#business">Business</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Publication
+            </h3>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="archive.html">Archive</a>
+
+            <a href="privacy.html">Privacy</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 BHARAT FRONTIERS. All rights reserved.
+        </p>
+
+        <p>
+            The Knowledge Post
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

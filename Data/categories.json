@@ -1,0 +1,47 @@
+[
+  {
+    "id": "science",
+    "name": "Science",
+    "description": "Scientific discoveries, research and emerging fields."
+  },
+  {
+    "id": "technology",
+    "name": "Technology",
+    "description": "Artificial intelligence, semiconductors, computing and emerging technologies."
+  },
+  {
+    "id": "policy",
+    "name": "Policy",
+    "description": "Technology policy, digital governance and regulation."
+  },
+  {
+    "id": "business",
+    "name": "Business",
+    "description": "Startups, industry, markets and the technology economy."
+  },
+  {
+    "id": "research",
+    "name": "Research & Innovation",
+    "description": "Research, patents, innovation and technology commercialisation."
+  },
+  {
+    "id": "india-frontiers",
+    "name": "India Frontiers",
+    "description": "Science, technology and innovation developments across India."
+  },
+  {
+    "id": "explainer",
+    "name": "Explainers",
+    "description": "Clear explanations of complex science and technology topics."
+  },
+  {
+    "id": "analysis",
+    "name": "Analysis",
+    "description": "Evidence-based examination of important developments and trends."
+  },
+  {
+    "id": "opinion",
+    "name": "Opinion",
+    "description": "Clearly identified viewpoints and arguments from authors."
+  }
+]

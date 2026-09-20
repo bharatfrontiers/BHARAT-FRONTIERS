@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BHARAT FRONTIERS | Issue 001</title>
+
+    <meta name="description"
+          content="BHARAT FRONTIERS Digital Edition — Issue 001">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- BHARAT FRONTIERS BRAND ICON -->
+    <link rel="icon"
+          type="image/png"
+          href="../../../Assets/Logos/bharat-frontiers-icon.png">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     READER HEADER
+===================================================== -->
+
+<header class="reader-header">
+
+    <div class="reader-header-inner">
+
+        <a href="../../index.html"
+           class="back-button">
+            ← Digital Edition
+        </a>
+
+
+        <!-- MAIN BHARAT FRONTIERS LOGO -->
+
+        <a href="../../index.html"
+           class="reader-brand"
+           aria-label="BHARAT FRONTIERS — The Knowledge Post">
+
+            <img src="../../../Assets/Logos/bharat-frontiers-logo-horizontal.png"
+                 alt="BHARAT FRONTIERS — The Knowledge Post">
+
+        </a>
+
+
+        <button id="contentsButton"
+                class="contents-button">
+            CONTENTS
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     READER
+===================================================== -->
+
+<main class="reader">
+
+
+    <!-- =================================================
+         LOADING
+    ================================================== -->
+
+    <div id="loading"
+         class="loading">
+
+        <div class="loading-logo">
+
+            <img src="../../../Assets/Logos/bharat-frontiers-icon.png"
+                 alt="BHARAT FRONTIERS">
+
+        </div>
+
+        <div class="loading-title">
+            BHARAT FRONTIERS
+        </div>
+
+        <p>
+            Loading Digital Edition...
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         ERROR
+    ================================================== -->
+
+    <div id="error"
+         class="error"
+         hidden>
+
+        <h2>
+            Unable to load this edition
+        </h2>
+
+        <p id="errorMessage">
+            Please check the data files.
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         NEWSPAPER PAGE
+    ================================================== -->
+
+    <section id="newspaperPage"
+             class="newspaper-page"
+             hidden>
+
+
+        <!-- =============================================
+             PAGE HEADER
+             
+             Small repeated logo REMOVED
+        ============================================== -->
+
+        <div class="page-header">
+
+            <div id="publicationName">
+                BHARAT FRONTIERS
+            </div>
+
+            <div id="pageSection">
+                DIGITAL EDITION
+            </div>
+
+            <div id="pageDate">
+                SEPTEMBER 2026
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             PAGE CONTENT
+        ============================================== -->
+
+        <div id="pageContent"
+             class="page-content">
+
+        </div>
+
+
+
+        <!-- =============================================
+             PAGE FOOTER
+        ============================================== -->
+
+        <div class="page-footer">
+
+            <span>
+                THE KNOWLEDGE POST
+            </span>
+
+            <span id="pageNumber">
+                PAGE 01 / 12
+            </span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         NAVIGATION
+    ================================================== -->
+
+    <div id="readerControls"
+         class="reader-controls"
+         hidden>
+
+        <button id="previousButton">
+            ← PREVIOUS
+        </button>
+
+
+        <div class="page-indicator">
+
+            <span id="currentPage">
+                01
+            </span>
+
+            <span>
+                /
+            </span>
+
+            <span id="totalPages">
+                12
+            </span>
+
+        </div>
+
+
+        <button id="nextButton">
+            NEXT →
+        </button>
+
+    </div>
+
+
+
+</main>
+
+
+
+<!-- =====================================================
+     CONTENTS PANEL
+===================================================== -->
+
+<aside id="contentsPanel"
+       class="contents-panel"
+       aria-hidden="true">
+
+
+    <div class="contents-header">
+
+        <h2>
+            CONTENTS
+        </h2>
+
+        <button id="closeContents">
+            ×
+        </button>
+
+    </div>
+
+
+    <div id="contentsList"
+         class="contents-list">
+
+    </div>
+
+
+</aside>
+
+
+
+<div id="overlay"
+     class="overlay"
+     hidden>
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

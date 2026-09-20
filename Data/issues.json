@@ -1,0 +1,102 @@
+[
+  {
+    "id": "001",
+    "title": "India's Emerging Frontiers",
+    "subtitle": "Science, Technology, Policy & Business",
+    "month": "September 2026",
+    "status": "draft",
+    "pages": 12,
+
+    "theme": "India's Emerging Frontiers",
+
+    "description": "The inaugural BHARAT FRONTIERS digital edition examining India's evolving science, technology, policy, business and innovation ecosystem.",
+
+    "coverArticle": "bf001",
+
+    "sections": [
+      {
+        "page": 3,
+        "name": "Science",
+        "category": "science",
+        "articles": [
+          "bf002",
+          "bf003",
+          "bf004"
+        ]
+      },
+
+      {
+        "page": 4,
+        "name": "Technology",
+        "category": "technology",
+        "articles": [
+          "bf005",
+          "bf006"
+        ]
+      },
+
+      {
+        "page": 5,
+        "name": "Technology Feature",
+        "category": "technology",
+        "articles": [
+          "bf005",
+          "bf006"
+        ]
+      },
+
+      {
+        "page": 6,
+        "name": "Policy",
+        "category": "policy",
+        "articles": [
+          "bf007"
+        ]
+      },
+
+      {
+        "page": 7,
+        "name": "Business",
+        "category": "business",
+        "articles": [
+          "bf008"
+        ]
+      },
+
+      {
+        "page": 8,
+        "name": "Research & Innovation",
+        "category": "research",
+        "articles": [
+          "bf004",
+          "bf009"
+        ]
+      },
+
+      {
+        "page": 9,
+        "name": "India Frontiers",
+        "category": "india-frontiers",
+        "articles": []
+      },
+
+      {
+        "page": 10,
+        "name": "Explainer",
+        "category": "explainer",
+        "articles": [
+          "bf010"
+        ]
+      },
+
+      {
+        "page": 11,
+        "name": "Analysis",
+        "category": "analysis",
+        "articles": [
+          "bf011"
+        ]
+      }
+    ]
+  }
+]
