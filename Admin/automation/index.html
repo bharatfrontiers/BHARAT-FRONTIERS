@@ -1,23 +1,941 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Automation — BHARAT FRONTIERS</title><link rel="stylesheet" href="../../style.css"><style>.admin{max-width:1100px;margin:auto;padding:42px 20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{padding:20px;border:1px solid #ddd;border-radius:14px;margin-bottom:18px}.full{grid-column:1/-1}input,select,textarea{width:100%;box-sizing:border-box;padding:11px;margin:5px 0 12px;border:1px solid #ccc;border-radius:8px}textarea{min-height:260px}.btn{padding:10px 15px;border:0;border-radius:9px;background:#111;color:#fff;cursor:pointer;margin:5px 6px 5px 0}.source{padding:12px;border-top:1px solid #eee}.source small{opacity:.65}.ok{padding:10px;border-radius:8px;background:#eef8ee}.err{padding:10px;border-radius:8px;background:#fff0f0}.article-preview{line-height:1.7}.article-preview p{margin:0 0 1em}@media(max-width:760px){.grid{grid-template-columns:1fr}}</style></head><body><main class="admin"><h1>BHARAT FRONTIERS Publication Agent</h1>
-<p><strong>Publication rule:</strong> No verified source evidence = no article publication.</p>
-<p>The editor gives the monthly command; the agent prepares source-backed article drafts, source links, “For More Info” resources, monthly issue material and image prompts. The editor can review/edit before publication.</p><p>Permanent workflow: source discovery → verification → AI drafting → human review → publication.</p><div class="grid"><section class="card"><h2>1. Topic</h2><label>Topic</label><input id="topic" value="India's emerging technology frontiers"><label>Section</label><select id="section"><option>technology</option><option>science</option><option>research</option><option>policy</option><option>business</option><option>innovation</option><option>explained</option></select><label>Type</label><select id="type"><option>analysis</option><option>feature</option><option>explainer</option><option>news</option></select><label>Image path (optional)</label><input id="image" placeholder="e.g. ../Articles/technology-frontiers.png"><button class="btn" onclick="discover()">Discover & Verify Sources</button><div id="sources"></div></section><section class="card"><h2>2. Generate</h2><p>Only verified trusted sources are sent to Workers AI. The model must map factual paragraphs to source numbers.</p><button class="btn" onclick="generate()">Generate Draft</button><div id="generateStatus"></div></section><section class="card full"><h2>3. Review</h2><div id="preview" class="article-preview"><p class="muted">Generate a draft to review it here.</p></div><button class="btn" onclick="setStatus('review')">Mark Review</button><button class="btn" onclick="setStatus('approved')">Approve</button><button class="btn" onclick="publish()">Publish</button><a class="btn" href="../review/">Review Desk</a></section></div><p><a href="../">← Admin</a></p></main><script>
-const K=()=>sessionStorage.getItem('bf_admin_key')||'';const H=()=>({'content-type':'application/json','x-admin-key':K()});let sourceData=[],draft=null;
-function out(id,html,cls=''){document.getElementById(id).innerHTML=`<div class="${cls}">${html}</div>`}
-async function discover(){if(!K())return out('sources','Save ADMIN_KEY first.','err');const topic=document.getElementById('topic').value.trim();out('sources','Discovering and verifying…');try{const r=await fetch('../../api/discover-sources',{method:'POST',headers:H(),body:JSON.stringify({topic})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Discovery failed');sourceData=d.sources||[];document.getElementById('sources').innerHTML=sourceData.map((s,i)=>`<div class="source"><b>[${i+1}] ${esc(s.title)}</b><br><small>${esc(s.publisher)} · ${esc(s.source_type)} · <a href="${esc(s.url)}" target="_blank">verified source</a></small></div>`).join('')||'<p>No trusted sources found.</p>'}catch(e){out('sources',esc(e.message),'err')}}
-async function generate(){if(!K())return out('generateStatus','Save ADMIN_KEY first.','err');if(sourceData.length<2)await discover();if(sourceData.length<2)return;out('generateStatus','Generating with Workers AI…');try{const r=await fetch('../../api/generate-article',{method:'POST',headers:H(),body:JSON.stringify({topic:document.getElementById('topic').value,section:document.getElementById('section').value,type:document.getElementById('type').value,image:document.getElementById('image').value,sources:sourceData})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Generation failed');draft=d.article;draft.sources=d.article?.sources||d.sources||[];document.getElementById('preview').innerHTML=`<h2>${esc(draft.title)}</h2><p><strong>${esc(draft.summary)}</strong></p>${draft.content_html}<h3>Verified references</h3><ol>${(draft.sources||[]).map(s=>`<li><a href="${esc(s.url)}" target="_blank">${esc(s.title)}</a> — ${esc(s.publisher)}</li>`).join('')}</ol>`;out('generateStatus',d.note,'ok')}catch(e){out('generateStatus',esc(e.message),'err')}}
-async function setStatus(status){if(!draft?.slug)return out('generateStatus','Generate a draft first.','err');try{const r=await fetch('../../api/admin-article',{method:'POST',headers:H(),body:JSON.stringify({slug:draft.slug,status})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Update failed');out('generateStatus',`Status: ${esc(status)}`,'ok')}catch(e){out('generateStatus',esc(e.message),'err')}}
-async function publish(){if(!draft?.slug)return out('generateStatus','Generate a draft first.','err');await setStatus('approved');try{const r=await fetch('../../api/publish-article',{method:'POST',headers:H(),body:JSON.stringify({id:draft.id,slug:draft.slug})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Publish failed');out('generateStatus',`Published: <a href="../../Articles/article.html?slug=${encodeURIComponent(d.slug)}" target="_blank">Open article</a>`,'ok')}catch(e){out('generateStatus',esc(e.message),'err')}}
-function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-</script><script>
-async function prepareMonthlyIssue(){
- const issue=prompt("Issue (YYYY-MM)","2026-09"); if(!issue)return;
- const raw=prompt("Permanent topics, one per line","Science\nTechnology\nResearch\nAI\nSemiconductors\nPolicy\nBusiness\nInnovation");
- if(!raw)return;
- const topics=raw.split(/\n+/).map(x=>x.trim()).filter(Boolean);
- const key=prompt("Admin key"); if(!key)return;
- const r=await fetch("../../api/generate-monthly",{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+key},body:JSON.stringify({issue,topics})});
- const d=await r.json(); document.getElementById("monthlyResult").textContent=JSON.stringify(d,null,2);
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Automation — BHARAT FRONTIERS</title>
+
+<link rel="stylesheet" href="../../style.css">
+
+<style>
+.admin{
+  max-width:1100px;
+  margin:auto;
+  padding:42px 20px;
 }
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.card{
+  padding:20px;
+  border:1px solid #ddd;
+  border-radius:14px;
+  margin-bottom:18px;
+  background:#fff;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  box-sizing:border-box;
+  padding:11px;
+  margin:5px 0 12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+textarea{
+  min-height:260px;
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 15px;
+  border:0;
+  border-radius:9px;
+  background:#111;
+  color:#fff;
+  cursor:pointer;
+  margin:5px 6px 5px 0;
+  text-decoration:none;
+}
+
+.btn:hover{
+  opacity:.88;
+}
+
+.source{
+  padding:12px;
+  border-top:1px solid #eee;
+}
+
+.source small{
+  opacity:.7;
+}
+
+.ok{
+  padding:10px;
+  border-radius:8px;
+  background:#eef8ee;
+}
+
+.err{
+  padding:10px;
+  border-radius:8px;
+  background:#fff0f0;
+}
+
+.article-preview{
+  line-height:1.7;
+}
+
+.article-preview p{
+  margin:0 0 1em;
+}
+
+pre{
+  white-space:pre-wrap;
+  word-break:break-word;
+  background:#f7f7f7;
+  padding:14px;
+  border-radius:8px;
+  overflow:auto;
+}
+
+.muted{
+  opacity:.65;
+}
+
+@media(max-width:760px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .full{
+    grid-column:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="admin">
+
+<h1>BHARAT FRONTIERS Publication Agent</h1>
+
+<p>
+<strong>Publication rule:</strong>
+No verified source evidence = no article publication.
+</p>
+
+<p>
+The editor gives the monthly command; the agent discovers trusted sources,
+verifies evidence, prepares source-backed article drafts and monthly issue
+material, and allows human review before publication.
+</p>
+
+<p>
+<strong>Permanent workflow:</strong>
+Source discovery → Verification → AI drafting → Human review → Approval → Publication
+</p>
+
+
+<div class="grid">
+
+<!-- =========================================================
+     INDIVIDUAL ARTICLE WORKFLOW
+     ========================================================= -->
+
+<section class="card">
+
+<h2>1. Topic</h2>
+
+<label for="topic">Topic</label>
+<input
+  id="topic"
+  value="India's emerging technology frontiers"
+>
+
+<label for="section">Section</label>
+
+<select id="section">
+  <option value="technology">Technology</option>
+  <option value="science">Science</option>
+  <option value="research">Research</option>
+  <option value="policy">Policy</option>
+  <option value="business">Business</option>
+  <option value="innovation">Innovation</option>
+  <option value="explained">Explained</option>
+</select>
+
+<label for="type">Type</label>
+
+<select id="type">
+  <option value="analysis">Analysis</option>
+  <option value="feature">Feature</option>
+  <option value="explainer">Explainer</option>
+  <option value="news">News</option>
+</select>
+
+<label for="image">Image path (optional)</label>
+
+<input
+  id="image"
+  placeholder="e.g. ../Articles/technology-frontiers.png"
+>
+
+<button class="btn" onclick="discover()">
+  Discover &amp; Verify Sources
+</button>
+
+<div id="sources"></div>
+
+</section>
+
+
+<section class="card">
+
+<h2>2. Generate</h2>
+
+<p>
+Only verified trusted sources are sent to Workers AI.
+The model must map factual claims to source numbers.
+</p>
+
+<button class="btn" onclick="generate()">
+  Generate Draft
+</button>
+
+<div id="generateStatus"></div>
+
+</section>
+
+
+<section class="card full">
+
+<h2>3. Review</h2>
+
+<div id="preview" class="article-preview">
+  <p class="muted">
+    Generate a draft to review it here.
+  </p>
+</div>
+
+<button class="btn" onclick="setStatus('review')">
+  Mark Review
+</button>
+
+<button class="btn" onclick="setStatus('approved')">
+  Approve
+</button>
+
+<button class="btn" onclick="publish()">
+  Publish
+</button>
+
+<a class="btn" href="../review/">
+  Review Desk
+</a>
+
+</section>
+
+
+<!-- =========================================================
+     MONTHLY PUBLICATION AGENT
+     ========================================================= -->
+
+<section class="card full">
+
+<h2>4. Monthly Agent Command</h2>
+
+<p>
+Use this command to prepare a complete monthly batch.
+The agent will discover and verify sources for each topic.
+Topics without sufficient verified evidence will be blocked.
+</p>
+
+<label for="monthlyIssue">
+Issue
+</label>
+
+<input
+  id="monthlyIssue"
+  type="month"
+  value="2026-09"
+>
+
+<label for="monthlyTopics">
+Permanent topics — one per line
+</label>
+
+<textarea id="monthlyTopics">Science
+Technology
+Research
+Artificial Intelligence
+Semiconductors
+Policy
+Business
+Innovation</textarea>
+
+<label for="monthlyAdminKey">
+Admin key
+</label>
+
+<input
+  id="monthlyAdminKey"
+  type="password"
+  placeholder="Enter ADMIN_KEY"
+  autocomplete="off"
+>
+
+<button class="btn" onclick="prepareMonthlyIssue()">
+  Prepare Monthly Issue
+</button>
+
+<div id="monthlyStatus"></div>
+
+<pre id="monthlyResult"></pre>
+
+</section>
+
+</div>
+
+
+<p>
+<a href="../">← Admin</a>
+</p>
+
+</main>
+
+
+<script>
+
+const API_BASE = "/api";
+
+let sourceData = [];
+let draft = null;
+
+
+/* =========================================================
+   COMMON HELPERS
+   ========================================================= */
+
+function adminKey(){
+
+  return sessionStorage.getItem("bf_admin_key") || "";
+
+}
+
+
+function requestHeaders(key = adminKey()){
+
+  return {
+    "Content-Type":"application/json",
+    "X-Admin-Key":key
+  };
+
+}
+
+
+function output(id,html,cls=""){
+
+  document.getElementById(id).innerHTML =
+    `<div class="${cls}">${html}</div>`;
+
+}
+
+
+function escapeHtml(value){
+
+  return String(value ?? "")
+    .replace(/[&<>"']/g,function(m){
+
+      return {
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#39;"
+      }[m];
+
+    });
+
+}
+
+
+/* =========================================================
+   ADMIN KEY
+   ========================================================= */
+
+function saveAdminKey(){
+
+  const existing = adminKey();
+
+  if(existing){
+    return existing;
+  }
+
+  const key = prompt("Enter ADMIN_KEY");
+
+  if(!key){
+    return "";
+  }
+
+  sessionStorage.setItem("bf_admin_key",key);
+
+  return key;
+
+}
+
+
+/* =========================================================
+   SOURCE DISCOVERY
+   ========================================================= */
+
+async function discover(){
+
+  const key = saveAdminKey();
+
+  if(!key){
+
+    return output(
+      "sources",
+      "ADMIN_KEY is required.",
+      "err"
+    );
+
+  }
+
+  const topic =
+    document.getElementById("topic").value.trim();
+
+  if(!topic){
+
+    return output(
+      "sources",
+      "Enter a topic first.",
+      "err"
+    );
+
+  }
+
+  output(
+    "sources",
+    "Discovering and verifying sources..."
+  );
+
+  try{
+
+    const response = await fetch(
+      `${API_BASE}/discover-sources`,
+      {
+        method:"POST",
+        headers:requestHeaders(key),
+        body:JSON.stringify({topic})
+      }
+    );
+
+    const data = await response.json();
+
+    if(!response.ok){
+
+      throw new Error(
+        data.error || "Source discovery failed."
+      );
+
+    }
+
+    sourceData = data.sources || [];
+
+    if(!sourceData.length){
+
+      document.getElementById("sources").innerHTML =
+        "<p>No trusted verified sources found.</p>";
+
+      return;
+
+    }
+
+    document.getElementById("sources").innerHTML =
+      sourceData.map(function(source,index){
+
+        return `
+          <div class="source">
+
+            <b>
+              [${index + 1}]
+              ${escapeHtml(source.title)}
+            </b>
+
+            <br>
+
+            <small>
+              ${escapeHtml(source.publisher)}
+              ·
+              ${escapeHtml(source.source_type)}
+              ·
+              <a
+                href="${escapeHtml(source.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Verified source
+              </a>
+            </small>
+
+          </div>
+        `;
+
+      }).join("");
+
+  }catch(error){
+
+    output(
+      "sources",
+      escapeHtml(error.message),
+      "err"
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   ARTICLE GENERATION
+   ========================================================= */
+
+async function generate(){
+
+  const key = saveAdminKey();
+
+  if(!key){
+
+    return output(
+      "generateStatus",
+      "ADMIN_KEY is required.",
+      "err"
+    );
+
+  }
+
+  if(sourceData.length < 2){
+
+    await discover();
+
+  }
+
+  if(sourceData.length < 2){
+
+    return output(
+      "generateStatus",
+      "At least two verified trusted sources are required.",
+      "err"
+    );
+
+  }
+
+  output(
+    "generateStatus",
+    "Generating source-backed draft with Workers AI..."
+  );
+
+  try{
+
+    const response = await fetch(
+      `${API_BASE}/generate-article`,
+      {
+        method:"POST",
+        headers:requestHeaders(key),
+        body:JSON.stringify({
+
+          topic:
+            document.getElementById("topic").value,
+
+          section:
+            document.getElementById("section").value,
+
+          type:
+            document.getElementById("type").value,
+
+          image:
+            document.getElementById("image").value,
+
+          sources:sourceData
+
+        })
+      }
+    );
+
+    const data = await response.json();
+
+    if(!response.ok){
+
+      throw new Error(
+        data.error || "Generation failed."
+      );
+
+    }
+
+    draft = data.article;
+
+    if(!draft){
+
+      throw new Error(
+        "The generation service returned no article."
+      );
+
+    }
+
+    draft.sources =
+      draft.sources ||
+      data.sources ||
+      [];
+
+    document.getElementById("preview").innerHTML = `
+
+      <h2>
+        ${escapeHtml(draft.title)}
+      </h2>
+
+      <p>
+        <strong>
+          ${escapeHtml(draft.summary)}
+        </strong>
+      </p>
+
+      ${draft.content_html || ""}
+
+      <h3>
+        Verified References
+      </h3>
+
+      <ol>
+
+        ${(draft.sources || []).map(function(source){
+
+          return `
+            <li>
+              <a
+                href="${escapeHtml(source.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ${escapeHtml(source.title)}
+              </a>
+              —
+              ${escapeHtml(source.publisher)}
+            </li>
+          `;
+
+        }).join("")}
+
+      </ol>
+
+    `;
+
+    output(
+      "generateStatus",
+      escapeHtml(
+        data.note ||
+        "Draft generated successfully."
+      ),
+      "ok"
+    );
+
+  }catch(error){
+
+    output(
+      "generateStatus",
+      escapeHtml(error.message),
+      "err"
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   ARTICLE STATUS
+   ========================================================= */
+
+async function setStatus(status){
+
+  const key = saveAdminKey();
+
+  if(!key){
+
+    return output(
+      "generateStatus",
+      "ADMIN_KEY is required.",
+      "err"
+    );
+
+  }
+
+  if(!draft?.slug){
+
+    return output(
+      "generateStatus",
+      "Generate a draft first.",
+      "err"
+    );
+
+  }
+
+  try{
+
+    const response = await fetch(
+      `${API_BASE}/admin-article`,
+      {
+        method:"POST",
+        headers:requestHeaders(key),
+        body:JSON.stringify({
+
+          slug:draft.slug,
+          status
+
+        })
+      }
+    );
+
+    const data = await response.json();
+
+    if(!response.ok){
+
+      throw new Error(
+        data.error || "Status update failed."
+      );
+
+    }
+
+    output(
+      "generateStatus",
+      `Status updated: ${escapeHtml(status)}`,
+      "ok"
+    );
+
+  }catch(error){
+
+    output(
+      "generateStatus",
+      escapeHtml(error.message),
+      "err"
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   ARTICLE PUBLICATION
+   ========================================================= */
+
+async function publish(){
+
+  const key = saveAdminKey();
+
+  if(!key){
+
+    return output(
+      "generateStatus",
+      "ADMIN_KEY is required.",
+      "err"
+    );
+
+  }
+
+  if(!draft?.slug){
+
+    return output(
+      "generateStatus",
+      "Generate a draft first.",
+      "err"
+    );
+
+  }
+
+  try{
+
+    await setStatus("approved");
+
+    const response = await fetch(
+      `${API_BASE}/publish-article`,
+      {
+        method:"POST",
+        headers:requestHeaders(key),
+        body:JSON.stringify({
+
+          id:draft.id,
+          slug:draft.slug
+
+        })
+      }
+    );
+
+    const data = await response.json();
+
+    if(!response.ok){
+
+      throw new Error(
+        data.error || "Publication failed."
+      );
+
+    }
+
+    output(
+      "generateStatus",
+      `
+        Published:
+        <a
+          href="/Articles/article.html?slug=${encodeURIComponent(data.slug)}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open article
+        </a>
+      `,
+      "ok"
+    );
+
+  }catch(error){
+
+    output(
+      "generateStatus",
+      escapeHtml(error.message),
+      "err"
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   MONTHLY PUBLICATION AGENT
+   ========================================================= */
+
+async function prepareMonthlyIssue(){
+
+  const issue =
+    document.getElementById("monthlyIssue").value;
+
+  if(!issue){
+
+    return output(
+      "monthlyStatus",
+      "Select the issue month.",
+      "err"
+    );
+
+  }
+
+  const raw =
+    document.getElementById("monthlyTopics").value;
+
+  const topics =
+    raw
+      .split(/\n+/)
+      .map(function(value){
+        return value.trim();
+      })
+      .filter(Boolean);
+
+  if(!topics.length){
+
+    return output(
+      "monthlyStatus",
+      "Enter at least one topic.",
+      "err"
+    );
+
+  }
+
+  const key =
+    document.getElementById("monthlyAdminKey").value.trim()
+    || saveAdminKey();
+
+  if(!key){
+
+    return output(
+      "monthlyStatus",
+      "ADMIN_KEY is required.",
+      "err"
+    );
+
+  }
+
+  sessionStorage.setItem(
+    "bf_admin_key",
+    key
+  );
+
+  output(
+    "monthlyStatus",
+    "Preparing monthly issue. Discovering and verifying sources..."
+  );
+
+  document.getElementById(
+    "monthlyResult"
+  ).textContent = "";
+
+  try{
+
+    const response = await fetch(
+      `${API_BASE}/generate-monthly`,
+      {
+        method:"POST",
+        headers:requestHeaders(key),
+        body:JSON.stringify({
+          issue,
+          topics
+        })
+      }
+    );
+
+    const data = await response.json();
+
+    document.getElementById(
+      "monthlyResult"
+    ).textContent =
+      JSON.stringify(data,null,2);
+
+    if(!response.ok){
+
+      throw new Error(
+        data.error ||
+        "Monthly agent execution failed."
+      );
+
+    }
+
+    output(
+      "monthlyStatus",
+      `
+        Monthly agent completed.
+        Generated:
+        ${data.generated?.length || 0}
+        · Blocked:
+        ${data.blocked?.length || 0}
+      `,
+      data.blocked?.length ? "" : "ok"
+    );
+
+  }catch(error){
+
+    output(
+      "monthlyStatus",
+      escapeHtml(error.message),
+      "err"
+    );
+
+  }
+
+}
+
 </script>
-<div class="card"><h2>Monthly Agent Command</h2><p>Use this only after reviewing the source policy and Cloudflare bindings.</p><button class="btn" onclick="prepareMonthlyIssue()">Prepare Monthly Issue</button><pre id="monthlyResult"></pre></div>
-</body></html>
+
+</body>
+</html>
